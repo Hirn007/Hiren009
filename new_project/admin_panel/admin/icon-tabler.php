@@ -3,10 +3,11 @@ include_once('header.php');
 ?>
       <div class="body-wrapper-inner">
         <div class="container-fluid">
-          <div class="card">
+          <div class="card w-100 h-100 position-relative overflow-hidden">
             <div class="card-body">
-              <h5 class="card-title fw-semibold mb-4">Sample Page</h5>
-              <p class="mb-0">This is a sample page </p>
+              <h5 class="card-title fw-semibold mb-4">Icons</h5>
+              <iframe src="https://tabler-icons.io/" frameborder="0" style="height: calc(100vh - 250px); width: 100%;"
+                data-simplebar=""></iframe>
             </div>
           </div>
         </div>
