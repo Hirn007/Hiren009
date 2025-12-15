@@ -13,23 +13,38 @@ include_once('header.php');
 					  <thead>
 						<tr>
 						  <th scope="col" class="px-0 text-muted">Id</th>
-						  <th scope="col" class="px-0 text-muted">Categories Name</th>
-						  <th scope="col" class="px-0 text-muted">Categories Image</th>
+						  <th scope="col" class="px-0 text-muted">Name</th>
+						  <th scope="col" class="px-0 text-muted">email</th>
+						  <th scope="col" class="px-0 text-muted">Password</th> 
+						  <th scope="col" class="px-0 text-muted">Gender</th>
+						  <th scope="col" class="px-0 text-muted">Hobby</th>
+						  <th scope="col" class="px-0 text-muted">Country</th>
 						  <th scope="col" class="px-0 text-muted">Action</th>
 						</tr>
 					  </thead>
 					  
 					  <tbody>
+					  <?php
+					  foreach($cust_arr as $value)
+					  {
+					  ?>
 						<tr>
-						  <td class="px-0">Id</td>
-						  <td class="px-0">Name</td>
-						  <td class="px-0">Image</td>	
+						  <td class="px-0"><?php echo $value->uid?></td>
+						  <td class="px-0"><?php echo $value->name?></td>
+						  <td class="px-0"><?php echo $value->email?></td>
+						  <td class="px-0"><?php echo $value->password?></td>
+						  <td class="px-0"><?php echo $value->gender?></td>
+						  <td class="px-0"><?php echo $value->hobby?></td>
+						  <td class="px-0"><?php echo $value->cid?></td>
+						  <td class="px-0"><img src="../website/img/customer/<?php echo $value->image?>" width="50px"/></td>
 						  <td class="px-0">
 							<a href="" class="btn btn-primary">Edit</a>
-							<a href="" class="btn btn-danger">Delete</a>
+							<a href="delete?del_customer=<?php echo $value->uid?>" class="btn btn-danger">Delete</a>
 						  </td>
 						</tr>
-						
+						<?php
+						  }
+						?>	
 					  </tbody>
 					</table>
 				  </div>

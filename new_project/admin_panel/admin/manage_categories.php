@@ -24,20 +24,28 @@ include_once('header.php');
 					  
 					  <tbody>
 					  
-					  
-					  
+					  <?php
+					  foreach($coffe_arr as $value)
+					  {
+					  ?>
 					  
 						<tr>
-						  <td scope="col" class="px-0"></td>
-						  <td scope="col" class="px-0"></td>
-						  <td scope="col" class="px-0"></td>
+						  <td scope="col" class="px-0"><?php echo $value->cofee_id?></td>
+						  <td scope="col" class="px-0">
+							<?php echo $value->coffe_name?>
+						  </td>
+						  <td scope="col" class="px-0">
+							<img width="100px" src="assets/images/categories/<?php echo $value->coffe_image?>" />
+						  </td>
 	
 						  <td class="px-0">
 							<a href="" class="btn btn-primary">Edit</a>
-							<a href="" class="btn btn-danger">Delete</a>
+							<a href="delete?del_coffe=<?php echo $value->coffe_id?>" class="btn btn-danger">Delete</a>
 						  </td>
 						</tr>
-					
+					<?php
+					  }
+					?>	
 					  </tbody>
 					</table>
 				  </div>

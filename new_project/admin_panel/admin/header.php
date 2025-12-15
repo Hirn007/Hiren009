@@ -50,7 +50,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="./dashboard" aria-expanded="false">
                 <i class="ti ti-atom"></i>
-                <span class="hide-menu">Dashboard</span>
+                <span class="hide-menu">Dashbord</span>
               </a>
             </li>
            
@@ -124,7 +124,7 @@
                       <div class="round-16 d-flex align-items-center justify-content-center">
                         <i class="ti ti-circle"></i>
                       </div>
-                      <span class="hide-menu">Manage Product</span>
+                      <span class="hide-menu">manage_products</span>
                     </div>
                     
                   </a>
@@ -139,7 +139,7 @@
             </li>
 			
 			<li class="sidebar-item">
-              <a class="sidebar-link" href="manage_customer" aria-expanded="false">
+              <a class="sidebar-link" href="Manage Customer" aria-expanded="false">
                 <i class="ti ti-atom"></i>
                 <span class="hide-menu">Customer</span>
               </a>
