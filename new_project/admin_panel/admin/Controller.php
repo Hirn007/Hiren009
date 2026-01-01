@@ -10,8 +10,35 @@ class control extends model {
 
         switch($url){
 
-            case '/admin_logout':
-                include_once('admin_logout.php');
+            case '/':
+                include_once('index.php');
+            break;
+            case '/index':
+                if(isset($_REQUEST['submit'])){
+                    echo "<script>
+                    alert('Login Successfully');
+                    window.location='dashbord';
+                    </script>";
+                }
+                include_once('index.php');
+                break;
+            case '/admin_register':
+
+                if(isset($_REQUEST['signup'])){
+                    $name = $_REQUEST['name'];
+                    $email = $_REQUEST['email'];
+                    $password = md5($_REQUEST['password']);
+
+                    $arr = array("name" => $name,
+                                 "email" => $email,
+                                 "password" => $password
+                                );
+
+                $run=$this->insert('admin',$arr);
+                }
+
+
+                include_once('admin_register.php');
             break;
 
             case '/dashbord':
@@ -23,17 +50,17 @@ class control extends model {
             break;
 
             case '/manage_categories':
-                $coffe_arr=$this->select('categories');
+                // $coffe_arr=$this->select('categories');
 				include_once('manage_categories.php');
 			break;
-                include_once('manage_categories.php');
-            break;
+                
 
             case '/add_products':
                 include_once('add_products.php');
             break;
 
             case '/manage_products':
+                	// $prod_arr=$this->select('product');
                 include_once('manage_products.php');
             break;
 
@@ -62,7 +89,7 @@ class control extends model {
             break;
 
             default:
-                echo "404 Page Not Found";
+                // echo "404 Page Not Found";
             break;
         }
     }

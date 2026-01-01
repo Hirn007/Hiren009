@@ -16,7 +16,7 @@ include_once('header.php');
 					  <thead>
 						<tr>
 						  <th scope="col" class="px-0 text-muted">Prod Id</th>
-						  <th scope="col" class="px-0 text-muted">coffe Id</th>
+						  <th scope="col" class="px-0 text-muted">Coffe Id</th>
 						  <th scope="col" class="px-0 text-muted">Title</th>
 						  <th scope="col" class="px-0 text-muted">Price</th>
 						  <th scope="col" class="px-0 text-muted">Description</th>
@@ -27,27 +27,23 @@ include_once('header.php');
 					  </thead>
 					  
 					  <tbody>
+
 					  <?php
-					  foreach($prod_arr as $value)
-					  {
+
+					 
 					  ?>
 						<tr>
-						  <td scope="col" class="px-0"><?php echo $value->pro_id?></td>
-						  <td scope="col" class="px-0"><?php echo $value->coffe_id?></td>
-						  <td scope="col" class="px-0"><?php echo $value->title?></td>
-						  <td scope="col" class="px-0"><?php echo $value->price?></td>
-						  <td scope="col" class="px-0"><?php echo $value->description?></td>
-						  <td scope="col" class="px-0">
-							<img width="100px" src="assets/images/products/<?php echo $value->image?>" />
-						  </td>
-						  <td scope="col" class="px-0"><?php echo $value->status?></td>
-						  <td class="px-0">
+						  <td scope="col" class="px-0"></td>
+						  <td scope="col" class="px-0"></td>
+						  <td scope="col" class="px-0"></td>
+						  <td scope="col" class="px-0"></td>
+						 
 							<a href="" class="btn btn-primary">Edit</a>
-							<a href="delete?del_prod=<?php echo $value->pro_id?>" class="btn btn-danger">Delete</a>
+							<a href="delete?del_prod=>" class="btn btn-danger">Delete</a>
 						  </td>
 						</tr>
 					<?php
-					  }
+					  
 					?>	
 					  </tbody>
 					</table>

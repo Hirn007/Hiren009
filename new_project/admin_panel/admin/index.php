@@ -45,7 +45,7 @@
                   <input type="submit" name="submit"class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" value="Sign In">
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">New to MaterialM?</p>
-                    <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an account</a>
+                    <a class="text-primary fw-bold ms-2" href="admin_register">Create an account</a>
                   </div>
                 </form>
               </div>

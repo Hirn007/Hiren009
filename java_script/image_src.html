@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<input type="submit" value="bulb on" onClick="handclosed()">
+
+<img src="pic_ganpati" id="ganpati" height="200px" width="100px" onmouseover="handclosed()" 
+onmouseout="handclosed()">
+
+<input type="submit" value="handopen" onClick="handopen()">
+
+<script>
+
+	function handopen(){
+		
+		var img=document.getElementById('ganpati');
+		img.src="pic_ganpati.jpeg";
+	}
+	
+	function handclosed(){
+		
+		var img=document.getElementById('ganpati');
+		img.src="pic_ganpati_2.jpeg";
+	}
+
+</script>
+
+</body>
+</html>
