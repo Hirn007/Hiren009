@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#test").animate({left: '600px',opacity: '0.5',height: '100px',width: '100px',fontSize: '3em'}
+	, "slow"
+	,"linear"
+	,function()
+	{
+      alert("Task Completed");
+    });
+	
+	
+	
+	
+  });
+});
+</script> 
+</head>
+<body>
+
+<button>Start Animation</button>
+<div id="test">
+    <img src="tom_&_jerry.jpg" alt="tom_&_jerry">
+</div>>
+</body>

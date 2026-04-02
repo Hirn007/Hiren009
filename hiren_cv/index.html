@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiren Chunara - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --text-main: #000000;
+            --text-muted: #000000;
+            --light-bg: #e2e8f0;
+            --border-color: #cbd5e1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #cbd5e1;
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 950px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 45px 50px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            color: #e2e8f0;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            font-size: 14px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #e2e8f0;
+        }
+
+        .contact-info i {
+            color: #93c5fd;
+        }
+
+        /* MAIN CONTENT */
+        .content {
+            display: flex;
+            background: #ffffff;
+        }
+
+        /* COLUMNS */
+        .left-col {
+            width: 38%;
+            padding: 45px 35px 45px 50px;
+            background-color: #f8fafc;
+        }
+
+        .right-col {
+            width: 62%;
+            padding: 45px 50px 45px 35px;
+            border-left: 1px solid #e2e8f0;
+        }
+
+        /* SECTION HEADINGS */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 6px;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* SHARED STYLES */
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .text-content {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+
+        /* SKILLS */
+        .skill-category {
+            margin-bottom: 12px;
+            font-size: 13.5px;
+        }
+
+        .skill-category strong {
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .skill-items {
+            color: var(--text-muted);
+        }
+
+        /* EDUCATION & CERTIFICATION */
+        .edu-item,
+        .cert-item {
+            margin-bottom: 20px;
+        }
+
+        .edu-title {
+            font-weight: 600;
+            font-size: 14.5px;
+            color: var(--text-main);
+            margin-bottom: 2px;
+        }
+
+        .edu-school {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .edu-meta {
+            font-size: 12.5px;
+            color: #000000;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* LANGUAGES */
+        .languages {
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        /* PROJECTS */
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .project-date {
+            font-size: 13.5px;
+            color: #000000;
+            font-weight: 600;
+        }
+
+        .project-tech {
+            font-size: 13.5px;
+            color: #2b6cb0;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .project-features {
+            font-size: 14px;
+            padding-left: 20px;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .project-features li {
+            margin-bottom: 6px;
+        }
+
+        /* AI TOOLS */
+        .ai-tool-item {
+            display: flex;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .ai-tool-name {
+            font-weight: 700;
+            width: 140px;
+            flex-shrink: 0;
+            color: var(--primary-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .ai-tool-name i {
+            margin-top: 4px;
+            color: #93c5fd;
+        }
+
+        .ai-tool-desc {
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .left-col,
+            .right-col {
+                width: 100%;
+                padding: 30px;
+                border: none;
+            }
+
+            .right-col {
+                padding-top: 0;
+            }
+
+            .project-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        .action-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .action-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background-color: #112240;
+        }
+
+        .share-btn {
+            background-color: #2b6cb0;
+        }
+
+        .share-btn:hover {
+            background-color: #1a4a7b;
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+            }
+
+            .action-buttons {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="action-buttons">
+        <button class="action-btn" onclick="window.print()">
+            <i class="fas fa-download"></i> Download CV
+        </button>
+        <button class="action-btn share-btn" id="share-btn" onclick="sharePDF()">
+            <i class="fas fa-share-nodes"></i> Share PDF
+        </button>
+    </div>
+
+    <div class="resume-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Hiren Chunara</h1>
+            <h2>Laravel Developer</h2>
+            <div class="contact-info">
+                <span><i class="fas fa-envelope"></i> hirenchunara1999@gmail.com</span>
+                <span><i class="fas fa-phone"></i> +91 6355125225</span>
+                <span><i class="fas fa-map-marker-alt"></i> Ahmedabad</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content">
+
+            <!-- Left Column -->
+            <div class="left-col">
+
+                <!-- Profile Section -->
+                <div class="section">
+                    <h3 class="section-title">Profile</h3>
+                    <div class="text-content">
+                        A motivated and detail-oriented PHP Developer with a strong foundation in core PHP, MySQL, HTML,
+                        CSS, JavaScript, and basic OOP concepts. I have hands-on experience building small-scale web
+                        applications such as an e-commerce website and a simple blog system, focusing on clean code,
+                        user-friendly interfaces, and database-driven functionality.
+                    </div>
+                    <div class="text-content">
+                        As a fresher, I am eager to apply my learning in a real-world environment, collaborate with
+                        senior developers, and contribute to scalable and secure web applications. I bring a strong
+                        willingness to learn new tools, adapt quickly, and take ownership of my tasks. I am looking for
+                        an opportunity in an MNC where I can grow professionally, work with modern technologies, and be
+                        part of impactful projects.
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="section">
+                    <h3 class="section-title">Technical Skills</h3>
+                    <div class="skill-category">
+                        <strong>Frontend</strong>
+                        <span class="skill-items">HTML, CSS, JavaScript, Bootstrap</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Backend</strong>
+                        <span class="skill-items">PHP, Laravel Framework</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Database</strong>
+                        <span class="skill-items">MySQL, SQL</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Languages</strong>
+                        <span class="skill-items">C, C++</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Tools & DevOps</strong>
+                        <span class="skill-items">GitHub, VS Code, Antigravity</span>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="section">
+                    <h3 class="section-title">Education</h3>
+                    <div class="edu-item">
+                        <div class="edu-title">M.SC QPM</div>
+                        <div class="edu-school">(Quality and Productivity Management System)</div>
+                        <div class="edu-school" style="margin-top: 5px;">Sardar Patel University</div>
+                        <div class="edu-meta">01/2022 – 03/2024 | Vallabh Vidhyanagar</div>
+                    </div>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="section">
+                    <h3 class="section-title">Languages</h3>
+                    <div class="languages">
+                        Hindi • Gujarati • English
+                    </div>
+                </div>
+
+                <!-- Certification Section -->
+                <div class="section">
+                    <h3 class="section-title">Certification</h3>
+                    <div class="cert-item">
+                        <div class="edu-title">Backend Developer</div>
+                        <div class="edu-school" style="margin-top: 3px;">TOPS Technologies</div>
+                        <div class="edu-meta">Completed</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-col">
+
+                <!-- Projects Section -->
+                <div class="section">
+                    <h3 class="section-title">Projects</h3>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <div class="project-title">Electro - E-commerce API & Platform</div>
+                            <div class="project-date">01/2026 – Present</div>
+                        </div>
+                        <div class="project-tech">Tech: Laravel, PHP, MySQL, RESTful APIs, Postman</div>
+                        <div class="project-desc">
+                            Developed a robust e-commerce API platform named "Electro" using the Laravel framework,
+                            acting as the primary Backend Developer.
+                        </div>
+                        <div class="project-desc">
+                            Built RESTful APIs for product management, category handling, and user data retrieval.
+                            Implemented Custom Middleware to ensure secure API access, role-based user authorization,
+                            and request validation.
+                        </div>
+                        <div class="project-desc">
+                            Created an Admin Panel backend system to efficiently manage inventory, users, and orders.
+                            Secured API endpoints and optimized database queries using Eloquent ORM to provide fast and
+                            secure data flow.
+                        </div>
+                        <div style="margin-top: 15px; font-weight: 600; font-size: 14px; color: var(--text-main);">Key
+                            Features & Highlights:</div>
+                        <ul class="project-features">
+                            <li>Role: Backend Developer</li>
+                            <li>RESTful APIs integration & Postman endpoint testing</li>
+                            <li>Custom Middleware for role-based authorization</li>
+                            <li>Admin backend for managing products, categories, and users</li>
+                            <li>Eloquent ORM optimization for fast data flow</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <div class="project-title">Coffee Shop – E-Commerce Website</div>
+                            <div class="project-date">11/2025 – 12/2025</div>
+                        </div>
+                        <div class="project-tech">Tech: PHP, MySQL, MVC Architecture, HTML, CSS, JavaScript</div>
+                        <div class="project-desc">
+                            Developed a dynamic Coffee Shop e-commerce website using PHP with MVC architecture to ensure
+                            clean code structure, scalability, and maintainability. The application allows users to
+                            browse coffee products, view details, and manage orders through a structured backend system.
+                        </div>
+                        <div class="project-desc">
+                            Implemented complete CRUD operations for product management, categories, users, and orders
+                            using MySQL database integration. Designed secure and optimized database queries for
+                            efficient data handling and smooth performance.
+                        </div>
+                        <div class="project-desc">
+                            The project includes an admin panel for managing products, inventory, pricing, and customer
+                            data, along with user authentication and session handling. Focused on backend logic,
+                            database relationships, and modular development following real-world application standards.
+                        </div>
+                        <div style="margin-top: 15px; font-weight: 600; font-size: 14px; color: var(--text-main);">Key
+                            Features:</div>
+                        <ul class="project-features">
+                            <li>MVC-based project structure</li>
+                            <li>Product, category, and order management (CRUD)</li>
+                            <li>MySQL database design & relational tables</li>
+                            <li>Admin panel for full website control</li>
+                            <li>User authentication and session management</li>
+                            <li>Clean and reusable PHP code</li>
+                            <li>Basic frontend integration for user interaction</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- AI Tools Section -->
+                <div class="section">
+                    <h3 class="section-title">AI Tools & Productivity</h3>
+
+                    <div class="ai-tool-item">
+                        <div class="ai-tool-name"><i class="fas fa-robot"></i> ChatGPT</div>
+                        <div class="ai-tool-desc">Used for debugging assistance, code review suggestions, and logic
+                            generation for backend APIs.</div>
+                    </div>
+
+                    <div class="ai-tool-item">
+                        <div class="ai-tool-name"><i class="fas fa-satellite-dish"></i> Antigravity</div>
+                        <div class="ai-tool-desc">Agentic AI integration for comprehensive task automation,
+                            architectural structuring, and accelerated development inside active codebases.</div>
+                    </div>
+
+                    <div class="ai-tool-item">
+                        <div class="ai-tool-name"><i class="fab fa-github"></i> GitHub Copilot</div>
+                        <div class="ai-tool-desc">Accelerates coding with intelligent contextual autocomplete,
+                            boilerplate generation, and refactoring suggestions.</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        function sharePDF() {
+            const element = document.querySelector('.resume-container');
+            const opt = {
+                margin:       0,
+                filename:     'Hiren_Chunara_CV.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+
+            const shareBtn = document.getElementById('share-btn');
+            const originalText = shareBtn.innerHTML;
+            shareBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
+            shareBtn.disabled = true;
+
+            html2pdf().set(opt).from(element).outputPdf('blob').then(function(pdfBlob) {
+                const file = new File([pdfBlob], "Hiren_Chunara_CV.pdf", { type: "application/pdf" });
+                
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    // Mobile or supported desktop: Share the PDF file natively
+                    navigator.share({
+                        title: 'Hiren Chunara - CV',
+                        text: 'Please find attached my CV.',
+                        files: [file]
+                    }).then(() => {
+                        resetBtn();
+                    }).catch((error) => {
+                        console.error('Error sharing:', error);
+                        resetBtn();
+                    });
+                } else {
+                    // Fallback for browsers that don't support file sharing
+                    alert("File sharing is not supported on this browser. It will fallback to sharing the link.");
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'Hiren Chunara - CV',
+                            text: 'Check out my professional CV!',
+                            url: window.location.href !== '' ? window.location.href : 'https://hirn007.github.io/hiren_cv'
+                        }).then(() => resetBtn())
+                        .catch(() => resetBtn());
+                    } else {
+                        // Complete fallback - just download it
+                        html2pdf().set(opt).from(element).save();
+                        resetBtn();
+                    }
+                }
+                
+                function resetBtn() {
+                    shareBtn.innerHTML = originalText;
+                    shareBtn.disabled = false;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

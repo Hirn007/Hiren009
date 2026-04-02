@@ -48,7 +48,7 @@
 			
 			
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./dashboard" aria-expanded="false">
+              <a class="sidebar-link" href="./dashbord" aria-expanded="false">
                 <i class="ti ti-atom"></i>
                 <span class="hide-menu">Dashbord</span>
               </a>
@@ -139,7 +139,7 @@
             </li>
 			
 			<li class="sidebar-item">
-              <a class="sidebar-link" href="Manage Customer" aria-expanded="false">
+              <a class="sidebar-link" href="manage_customer" aria-expanded="false">
                 <i class="ti ti-atom"></i>
                 <span class="hide-menu">Customer</span>
               </a>
