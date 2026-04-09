@@ -64,16 +64,25 @@ Route::get('/account', [UserAuthController::class, 'account'])->name('user.accou
        //====== admin routes ========
 
 
-// Admin Login Routes
+// =========================
+// Public Admin Login Routes
+// =========================
 Route::get('/admin-login', [AdminController::class, 'admin_login'])->name('admin.login');
 Route::post('/admin-login', [AdminController::class, 'loginCheck'])->name('admin.loginCheck');
 
-// Admin Logout
-Route::get('/admin-logout', [AdminController::class, 'admin_logout'])->name('admin.logout');
 
-// Dashboard (NO MIDDLEWARE)
-Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+// =========================
+// Protected Admin Routes
+// =========================
+Route::middleware(['adminAuth'])->group(function () {
 
+    // Logout
+    Route::get('/admin-logout', [AdminController::class, 'admin_logout'])->name('admin.logout');
+
+    // Dashboard
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    // CATEGORY ROUTES
     Route::get('/add-category', [CategoryController::class, 'create'])->name('add_category');
     Route::post('/add-category', [CategoryController::class, 'store'])->name('store_category');
 
@@ -81,29 +90,42 @@ Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.das
 
     Route::get('/admin/category/delete/{id}', [CategoryController::class, 'destroy'])->name('category_delete');
 
-     Route::get('/add-products',[ProductController::class,'create'])->name('add_product');
-     Route::post('/add-products',[ProductController::class,'store'])->name('store_products');
 
+    // PRODUCT ROUTES
+    Route::get('/add-products',[ProductController::class,'create'])->name('add_product');
+    Route::post('/add-products',[ProductController::class,'store'])->name('store_products');
 
     Route::get('/product-management', [ProductController::class, 'index'])->name('product_management');
     Route::get('/admin/get-products/{cat_id}', [ProductController::class, 'getProducts'])->name('get_products');
 
-    Route::get('/order-management', function () {
-        return view('admin.order_management');
-    });
+
+    // ORDER ROUTES
+    Route::get('/order-management', [OrderController::class, 'orderManagement'])->name('order_management');
+
     Route::get('/add-order', [OrderController::class, 'create'])->name('add_order');
     Route::post('/add-order', [OrderController::class, 'store'])->name('store_order');
+
+    Route::get('admin/order/details/{id}', [OrderController::class, 'show']);
+    Route::post('admin/order/update-status/{id}', [OrderController::class, 'updateStatus']);
+    Route::get('admin/order/delete/{id}', [OrderController::class, 'deleteOrder']);
 
     Route::get('admin/orders', [OrderController::class, 'index']);
     Route::get('admin/order/add', [OrderController::class, 'create']);
     Route::post('admin/order/store', [OrderController::class, 'store']);
+
     Route::get('admin/order/store', function() {
         return redirect('admin/order/add');
     });
-     Route::get('/user-management', function () {
-        return view('admin.user_management');
-    });
-    
+
+    // USER MANAGEMENT
+   Route::get('/admin/users', [AdminController::class, 'userManagement'])->name('admin.users');
+   Route::get('/admin/users/blocked', [AdminController::class, 'blockedUsers'])->name('admin.users.blocked');
+
+Route::get('/admin/user/block/{id}', [AdminController::class, 'blockUser'])->name('user.block');
+Route::get('/admin/user/unblock/{id}', [AdminController::class, 'unblockUser'])->name('user.unblock');
+Route::get('/admin/user/view/{id}', [AdminController::class, 'viewUser'])->name('user.view');
+
+});
 
 
 

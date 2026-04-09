@@ -118,9 +118,9 @@
             </a>
         </li>
 
-        <!-- Login Page -->
+        <!-- ⭐ UPDATED LOGIN PAGE (FIXED) -->
         <li class="border-t border-light-border w-full h-full px-2 py-3">
-            <a href="{{ url('login') }}"
+            <a href="{{ route('admin.login') }}"
                class="mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                 Login Page
                 <span><i class="fa fa-angle-right float-right"></i></span>
@@ -129,7 +129,7 @@
 
         <!-- User Management -->
         <li class="border-t border-light-border w-full h-full px-2 py-3">
-            <a href="{{ url('user-management') }}"
+            <a href="{{ url('admin/users') }}"
                class="mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                 User Management
                 <span><i class="fa fa-angle-right float-right"></i></span>
@@ -151,13 +151,13 @@
                class="mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                 Logout
                 <span><i class="fa fa-angle-right float-right"></i></span>
-            </a>
-        </li>
+              </a>
+          </li>
 
-    </ul>
+      </ul>
 
-</li>
+   </li>
      </ul>
 
-    </aside>
+       </aside>
             <!--/Sidebar-->

@@ -20,6 +20,28 @@ class OrderController extends Controller
         return view('admin.order_list', compact('orders'));
     }
 
+    public function orderManagement()
+    {
+        $totalOrders = Order::count();
+        $totalRevenue = Order::sum('grand_total');
+        
+        $pendingOrders = Order::where('status', 'Pending')->count();
+        $processingOrders = Order::where('status', 'Processing')->count();
+        $shippedOrders = Order::where('status', 'Shipped')->count();
+        $deliveredOrders = Order::where('status', 'Delivered')->count();
+        
+        $pendingPercent = $totalOrders > 0 ? round(($pendingOrders / $totalOrders) * 100) : 0;
+        $processingPercent = $totalOrders > 0 ? round(($processingOrders / $totalOrders) * 100) : 0;
+        $shippedPercent = $totalOrders > 0 ? round(($shippedOrders / $totalOrders) * 100) : 0;
+        $deliveredPercent = $totalOrders > 0 ? round(($deliveredOrders / $totalOrders) * 100) : 0;
+
+        return view('admin.order_management', compact(
+            'totalOrders', 'totalRevenue', 'pendingOrders', 'deliveredOrders',
+            'processingOrders', 'shippedOrders',
+            'pendingPercent', 'processingPercent', 'shippedPercent', 'deliveredPercent'
+        ));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -85,7 +107,8 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order = Order::with('items.product')->findOrFail($id);
+        return view('admin.order_details', compact('order'));
     }
 
     /**
@@ -117,6 +140,25 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function updateStatus(Request $request, $id)
+    {
+        $order = Order::findOrFail($id);
+        $order->status = $request->status;
+        $order->save();
+
+        return redirect()->back()->with('success', 'Order status updated successfully.');
+    }
+
+    public function deleteOrder($id)
+    {
+        $order = Order::findOrFail($id);
+        // delete related order items
+        OrderItem::where('order_id', $id)->delete();
+        $order->delete();
+
+        return redirect()->back()->with('success', 'Order deleted successfully.');
+    }
+
     public function destroy($id)
     {
         //
