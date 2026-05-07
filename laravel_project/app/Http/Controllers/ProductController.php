@@ -32,6 +32,53 @@ class ProductController extends Controller
 }
 
     /**
+     * Search products and show product listing page
+     */
+    public function search(Request $request)
+{
+    $query = $request->get('query', '');
+    $category = $request->get('category', '');
+
+    $products = product::when($query, function($q) use ($query) {
+            return $q->where('name', 'like', '%'.$query.'%')
+                     ->orWhere('description', 'like', '%'.$query.'%')
+                     ->orWhere('brand', 'like', '%'.$query.'%');
+        })
+        ->when($category, function($q) use ($category) {
+            return $q->where('cate_id', $category);
+        })
+        ->get();
+
+    return view('website.product', compact('products', 'query'));
+}
+
+    public function ajaxSearch(Request $request)
+    {
+        $query = $request->get('query', '');
+
+        if($query == '') {
+            return response()->json([]);
+        }
+
+        $products = product::where('name', 'like', '%'.$query.'%')
+            ->orWhere('description', 'like', '%'.$query.'%')
+            ->orWhere('brand', 'like', '%'.$query.'%')
+            ->limit(10)
+            ->get();
+
+        return response()->json($products);
+    }
+
+    /**
+     * Show single product detail page
+     */
+    public function productDetail($id)
+{
+    $product = product::findOrFail($id);
+    return view('website.product', compact('product'));
+}
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

@@ -8,6 +8,7 @@ $(function () {
             event.preventDefault();
             var name = $("input#name").val();
             var email = $("input#email").val();
+            var phone = $("input#phone").val();
             var subject = $("input#subject").val();
             var message = $("textarea#message").val();
 
@@ -15,11 +16,12 @@ $(function () {
             $this.prop("disabled", true);
 
             $.ajax({
-                url: "contact.php",
+                url: "contact",
                 type: "POST",
                 data: {
                     name: name,
                     email: email,
+                    phone: phone,
                     subject: subject,
                     message: message
                 },

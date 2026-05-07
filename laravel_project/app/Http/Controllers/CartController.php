@@ -8,7 +8,17 @@ class CartController extends Controller
 {
    public function viewCart()
 {
-    $cartItems = \DB::table('cart')->get();
+    $cartItems = \DB::table('cart')
+        ->join('products', 'cart.product_id', '=', 'products.id')
+        ->select(
+            'cart.id as cart_id',
+            'cart.qty',
+            'cart.price',
+            'cart.total_price',
+            'products.name as product_name',
+            'products.image'
+        )
+        ->get();
 
     return view('website.cart', compact('cartItems'));
 }
@@ -23,5 +33,11 @@ public function addToCart(Request $request)
     ]);
 
     return back()->with('success', 'Product added to cart!');
+}
+
+public function deleteCart($id)
+{
+    \DB::table('cart')->where('id', $id)->delete();
+    return back()->with('success', 'Item removed from cart!');
 }
 }

@@ -23,10 +23,12 @@ use App\Http\Controllers\OrderController;
       
    
 Route::get('/', function () {
-    return view('website.index');
+    $products = \App\Models\product::limit(10)->get(); // basic fetching for demo
+    return view('website.index', compact('products'));
 });
 Route::get('/index', function () {
-    return view('website.index');
+    $products = \App\Models\product::limit(10)->get();
+    return view('website.index', compact('products'));
 });
 Route::get('/blank', function () {
     return view('website.blank');
@@ -36,6 +38,12 @@ Route::post('/checkout', [CheckoutController::class, 'placeOrder'])->name('place
 
 Route::get('/cart', [CartController::class, 'viewCart'])->name('view.cart');
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add.cart');
+
+// Fallback for improper GET requests to add-to-cart
+Route::get('/add-to-cart', function(){
+    return redirect('/')->with('error', 'Please click the Add to Cart button.');
+});
+
 Route::get('/cart/delete/{id}', [CartController::class, 'deleteCart'])->name('cart.delete');
 
 // Fallback for old place-order URL to prevent 404 on refresh
@@ -45,6 +53,8 @@ Route::any('/place-order', function() {
 
 
 Route::get('/search', [ProductController::class, 'search'])->name('product.search');
+Route::get('/ajax-search', [ProductController::class, 'ajaxSearch'])->name('product.ajax_search');
+Route::get('/product/{id}', [ProductController::class, 'productDetail'])->name('product.detail');
 Route::get('/store', function () {
     return view('website.store');
 });

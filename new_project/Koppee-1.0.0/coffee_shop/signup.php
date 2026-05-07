@@ -12,7 +12,7 @@
                 <div class=" offset-lg-2 col-lg-8">
 					 <h3 align="center" class="mb-5">Signup In Here</h3>
                     <div class="">
-                        <form action="signup" method="post"  enctype="multipart/form-data">
+                        <form action="login" method="post"  enctype="multipart/form-data">
                             <div class="row">
 								
                                 <div class="col-lg-12 m-2">

@@ -1,16 +1,15 @@
-<?php
+﻿<?php
 include_once('header.php');
 ?>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <div class="body-wrapper-inner">
         <div class="container-fluid">
           <div class="card">
@@ -19,22 +18,34 @@ include_once('header.php');
               <div class="card">
                 <div class="card-body">
                   
-				  <form action="" method="post" enctype="multipart/form-data"> 
+  <form action="add_products" method="post" enctype="multipart/form-data"> 
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Product Name</label>
-                      <input type="text" name="product_name" class="form-control" >
+                      <label class="form-label">Title</label>
+                      <input type="text" name="product_name" class="form-control" required>
                     </div>
-					
                     <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Product Image</label>
-                      <input type="file" name="product_image" class="form-control" >
+                      <label class="form-label">Price</label>
+                      <input type="number" name="price" class="form-control" step="0.01" required>
                     </div>
-                   
+                    <div class="mb-3">
+                      <label class="form-label">Description</label>
+                      <textarea name="description" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Status</label>
+                      <select name="status" class="form-control" required>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Image</label>
+                      <input type="file" name="product_image" class="form-control" required>
+                    </div>
                     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                   </form>
                 
-				
-				</div>
+</div>
               </div>
 
             </div>

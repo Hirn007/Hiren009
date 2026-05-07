@@ -11,7 +11,7 @@ class CheckoutController extends Controller
     {
         $cartItems = \DB::table('cart')
                         ->join('products', 'cart.product_id', '=', 'products.id')
-                        ->select('cart.*', 'products.name as product_name')
+                        ->select('cart.*', 'products.name as product_name', 'products.image', 'products.price as product_price', 'products.description')
                         ->get();
         return view('website.checkout', compact('cartItems'));
     }
@@ -41,15 +41,16 @@ class CheckoutController extends Controller
 
         // ✔ SAVE ORDER
         $orderId = \DB::table('orders')->insertGetId([
-            'customer_name'    => $request->customer_name,
-            'customer_phone'   => $request->customer_phone,
-            'customer_email'   => $request->customer_email,
-            'customer_address' => $request->customer_address,
-            'payment_method'   => $request->payment_method,
-            'note'             => $request->note,
-            'grand_total'      => $total,
-            'status'           => 'Pending',
-            'created_at'       => now(),
+            'customer_name'       => $request->customer_name,
+            'customer_phone'      => $request->customer_phone,
+            'customer_email'      => $request->customer_email,
+            'customer_address'    => $request->customer_address,
+            'payment_method'      => $request->payment_method,
+            'razorpay_payment_id' => $request->razorpay_payment_id,
+            'note'                => $request->note,
+            'grand_total'         => $total,
+            'status'              => 'Pending',
+            'created_at'          => now(),
         ]);
 
         // ✔ SAVE ORDER ITEMS

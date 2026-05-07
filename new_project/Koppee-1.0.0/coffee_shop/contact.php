@@ -48,6 +48,11 @@ include_once('header.php');
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
+                                <input type="tel" class="form-control bg-transparent p-4" id="phone" placeholder="Your Phone (e.g. +91 9876543210)"
+                                    required="required" data-validation-required-message="Please enter your phone with country code" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
                                 <input type="text" class="form-control bg-transparent p-4" id="subject" placeholder="Subject"
                                     required="required" data-validation-required-message="Please enter a subject" />
                                 <p class="help-block text-danger"></p>

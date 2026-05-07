@@ -30,7 +30,7 @@ include_once('header.php');
 					  ?>
 					  
 						<tr>
-						  <td scope="col" class="px-0"><?php echo $value->category_id?></td>
+						  <td scope="col" class="px-0"><?php echo $value->id?></td>
 						  <td scope="col" class="px-0">
 							<?php echo $value->category_name?>
 						  </td>
@@ -39,8 +39,8 @@ include_once('header.php');
 						  </td>
 	
 						  <td class="px-0">
-							<a href="" class="btn btn-primary">Edit</a>
-							<a href="delete?del_category=<?php echo $value->category_id?>" class="btn btn-danger">Delete</a>
+							<a href="edit_categories?edit_category=<?php echo $value->id ?>" class="btn btn-primary">Edit</a>
+							<a href="delete?del_category=<?php echo $value->id?>" class="btn btn-danger">Delete</a>
 						  </td>
 						</tr>
 					<?php

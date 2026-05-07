@@ -62,4 +62,17 @@ class UserAuthController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+    // USER ACCOUNT
+    public function account()
+    {
+        if (!Auth::check()) {
+            return redirect('/login')->with('error', 'Please login to view your account.');
+        }
+
+        $user = Auth::user();
+        $orders = \App\Models\Order::where('customer_email', $user->email)->orderBy('created_at', 'desc')->get();
+
+        return view('website.account', compact('user', 'orders'));
+    }
 }

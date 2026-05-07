@@ -14,6 +14,7 @@
 									<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
 									<li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
 									<li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+									<li><a href="https://wa.me/{{ $setting->phone_number ?? '6355125225' }}" target="_blank"><i class="fa fa-whatsapp"></i>WhatsApp Us</a></li>
 								</ul>
 							</div>
 						</div>
@@ -50,8 +51,8 @@
 							<div class="footer">
 								<h3 class="footer-title">Service</h3>
 								<ul class="footer-links">
-									<li><a href="#">My Account</a></li>
-									<li><a href="#">View Cart</a></li>
+									<li><a href="{{ route('user.account') }}">My Account</a></li>
+									<li><a href="{{ route('view.cart') }}">View Cart</a></li>
 									<li><a href="#">Wishlist</a></li>
 									<li><a href="#">Track My Order</a></li>
 									<li><a href="#">Help</a></li>
@@ -102,5 +103,60 @@
 		<script src="{{url('website/js/jquery.zoom.min.js')}}"></script>
 		<script src="{{url('website/js/main.js')}}"></script>
 
+        <script>
+            $(document).ready(function() {
+                $('#ajax-search-input').on('keyup', function() {
+                    let query = $(this).val();
+                    if (query.length > 0) {
+                        $.ajax({
+                            url: "{{ route('product.ajax_search') }}",
+                            type: "GET",
+                            data: { query: query },
+                            success: function(data) {
+                                $('#ajax-search-results').empty();
+                                if (data.length > 0) {
+                                    $('#ajax-search-results').show();
+                                    data.forEach(function(product) {
+                                        let url = "{{ url('/product') }}/" + product.id;
+                                        $('#ajax-search-results').append(
+                                            '<div style="padding: 10px; border-bottom: 1px solid #E4E7ED; transition: background 0.3s;" onmouseover="this.style.background=\'#F8F9FA\'" onmouseout="this.style.background=\'transparent\'">' +
+                                            '<a href="' + url + '" style="display: block; color: #333; text-decoration: none;">' +
+                                            '<div style="display: flex; align-items: center;">' +
+                                            '<img src="{{ url("upload/product") }}/' + product.image + '" style="width: 50px; height: 50px; margin-right: 15px; object-fit: cover; border-radius: 4px;">' +
+                                            '<div>' +
+                                            '<strong style="display: block; font-size: 14px; margin-bottom: 3px;">' + product.name + '</strong>' +
+                                            '<span style="color: #D10024; font-weight: bold; font-size: 14px;">$' + product.price + '</span>' +
+                                            '</div>' +
+                                            '</div>' +
+                                            '</a></div>'
+                                        );
+                                    });
+                                } else {
+                                    $('#ajax-search-results').show();
+                                    $('#ajax-search-results').append('<div style="padding: 15px; text-align: center; color: #666;">No products found for "' + query + '"</div>');
+                                }
+                            }
+                        });
+                    } else {
+                        $('#ajax-search-results').hide();
+                        $('#ajax-search-results').empty();
+                    }
+                });
+
+                // Hide results when clicking outside
+                $(document).click(function(e) {
+                    if (!$(e.target).closest('.header-search').length) {
+                        $('#ajax-search-results').hide();
+                    }
+                });
+
+                // Show results again when clicking the input if there's a query
+                $('#ajax-search-input').click(function() {
+                    if ($(this).val().length > 0 && $('#ajax-search-results').children().length > 0) {
+                        $('#ajax-search-results').show();
+                    }
+                });
+            });
+        </script>
 	</body>
 </html>

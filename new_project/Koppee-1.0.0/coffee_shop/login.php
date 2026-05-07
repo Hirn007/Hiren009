@@ -23,7 +23,7 @@
                         </div>
                     <?php endif; ?>
 
-                    <form method="POST" action="login">
+                    <form method="POST" action="index" enctype="multipart/form-data">
 
                         <div class="form-group mb-4">
                             <label style="color:#C8A882;">Email Address</label>

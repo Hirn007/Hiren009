@@ -24,7 +24,7 @@
                   <img src="./assets/images/logos/logo.svg" alt="">
                 </a>
                 <p class="text-center">Your Social Campaigns</p>
-                <form action="" method="post">
+                <form action="index" method="post">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email :</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

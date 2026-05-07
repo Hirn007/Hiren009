@@ -69,16 +69,17 @@
 
                 <!-- SEARCH BAR -->
                 <div class="col-md-6">
-                    <div class="header-search">
+                    <div class="header-search" style="position: relative;">
                         <form action="{{ url('/search') }}" method="GET">
                             <select class="input-select" name="category">
                                 <option value="">All Categories</option>
                                 <option value="1">Category 01</option>
                                 <option value="2">Category 02</option>
                             </select>
-                            <input class="input" type="text" name="query" placeholder="Search here">
+                            <input class="input" type="text" name="query" id="ajax-search-input" placeholder="Search here" autocomplete="off">
                             <button class="search-btn" type="submit">Search</button>
                         </form>
+                        <div id="ajax-search-results" style="position: absolute; top: 100%; left: 0; width: 100%; background: #fff; z-index: 999; border: 1px solid #E4E7ED; display: none; max-height: 400px; overflow-y: auto; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); border-radius: 0 0 4px 4px;"></div>
                     </div>
                 </div>
                 <!-- /SEARCH BAR -->
@@ -101,7 +102,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span>Your Cart</span>
-                                <div class="qty">3</div>
+                                <div class="qty">{{ \DB::table('cart')->count() }}</div>
                             </a>
                             <div class="cart-dropdown">
                                 <div class="cart-list">
@@ -155,5 +156,6 @@
     <!-- /MAIN HEADER -->
 </header>
 <!-- /HEADER -->
+ 
 </body>
 </html>
