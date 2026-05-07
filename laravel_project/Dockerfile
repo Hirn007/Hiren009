@@ -1,38 +1,28 @@
 FROM php:8.2-apache
 
-# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    git \
-    unzip \
-    zip \
-    curl \
-    libpng-dev \
-    libonig-dev \
-    libxml2-dev \
-    libzip-dev
+    git unzip zip curl \
+    libpng-dev libonig-dev libxml2-dev libzip-dev
 
-# Install PHP extensions
-RUN docker-php-ext-install pdo pdo_mysql zip
+RUN docker-php-ext-install pdo pdo_mysql mbstring xml zip
 
-# Enable Apache rewrite
 RUN a2enmod rewrite
 
-# Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Set working directory
 WORKDIR /var/www/html
 
-# Copy all files
 COPY . .
 
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader
+# FIXED COMPOSER LINE
+RUN COMPOSER_MEMORY_LIMIT=-1 composer install \
+    --no-dev \
+    --optimize-autoloader \
+    --no-interaction \
+    --prefer-dist
 
-# Laravel permissions
 RUN chmod -R 775 storage bootstrap/cache
 
-# Set Apache document root
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
