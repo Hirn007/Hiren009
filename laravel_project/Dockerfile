@@ -2,10 +2,11 @@ FROM php:8.2-apache
 
 RUN apt-get update && apt-get install -y \
     git unzip zip curl \
-    libpng-dev libonig-dev libxml2-dev libzip-dev
+    libpng-dev libonig-dev libxml2-dev libzip-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# PDO already hota hai, isliye "pdo" mat install karo
-RUN docker-php-ext-install pdo_mysql mbstring xml zip
+# Install required PHP extensions
+RUN docker-php-ext-install pdo_mysql zip
 
 RUN a2enmod rewrite
 
@@ -16,9 +17,17 @@ ENV COMPOSER_MEMORY_LIMIT=-1
 
 WORKDIR /var/www/html
 
+# Copy only composer files first to leverage Docker cache
+COPY composer.json composer.lock* ./
+
+# Run composer install with -vvv (verbose) so we can see the EXACT error if it fails
+RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --ignore-platform-reqs -vvv
+
+# Now copy the rest of the project
 COPY . .
 
-RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist --no-scripts --ignore-platform-reqs
+# Generate optimized autoloader
+RUN composer dump-autoload --optimize
 
 RUN chown -R www-data:www-data storage bootstrap/cache && \
     chmod -R 775 storage bootstrap/cache
