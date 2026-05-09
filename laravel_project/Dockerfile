@@ -17,14 +17,11 @@ ENV COMPOSER_MEMORY_LIMIT=-1
 
 WORKDIR /var/www/html
 
-# Copy only composer files first to leverage Docker cache
-COPY composer.json composer.lock* ./
+# Copy all files first to avoid any context issues
+COPY . .
 
 # Run composer install with -vvv (verbose) so we can see the EXACT error if it fails
 RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --ignore-platform-reqs -vvv
-
-# Now copy the rest of the project
-COPY . .
 
 # Generate optimized autoloader
 RUN composer dump-autoload --optimize
