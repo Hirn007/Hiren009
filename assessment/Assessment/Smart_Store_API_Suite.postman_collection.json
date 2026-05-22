@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "4bc2f829-0cb5-4b08-8e6d-74d1a03f4bc2",
+		"name": "Smart Store API Suite Collection",
+		"description": "Standardized REST API collection for Smart Store Products, Users, and Orders resources, featuring JWT auth and automated tests.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jane Doe\",\n    \"email\": \"jane@gmail.com\",\n    \"password\": \"DemoPass123!\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth.php?action=register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth.php"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "register"
+								}
+							]
+						},
+						"description": "Register a new store customer account profile."
+					},
+					"response": []
+				},
+				{
+					"name": "Login Customer (Saves Token)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"if (jsonData && jsonData.data && jsonData.data.token) {",
+									"    pm.collectionVariables.set(\"jwt_token\", jsonData.data.token);",
+									"    console.log(\"Saved JWT Token to variables: \" + jsonData.data.token);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john@gmail.com\",\n    \"password\": \"DemoPass123!\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth.php?action=login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth.php"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "login"
+								}
+							]
+						},
+						"description": "Logs in the user and automatically saves the returned JWT token to collection variables for all subsequent requests."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products Resource",
+			"item": [
+				{
+					"name": "Fetch All Products (Public)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/products.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products.php"
+							]
+						},
+						"description": "Retrieve the complete public inventory catalog of smart products."
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Single Product (Public)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/products.php?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Fetch details of a single product using target query parameter ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product (Protected - JWT)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201 Created\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"pm.test(\"Product creation was successful\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.status).to.eql(\"success\");",
+									"    pm.expect(jsonData.data.product).to.have.property(\"id\");",
+									"    pm.expect(jsonData.data.product.sku).to.eql(\"PM-TEST-SKU\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Postman Test Earbuds\",\n    \"description\": \"Preconfigured test product added via automated Postman runner scripts.\",\n    \"price\": 89.99,\n    \"stock\": 50,\n    \"sku\": \"PM-TEST-SKU\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/products.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products.php"
+							]
+						},
+						"description": "Add a new product to inventory. Requires admin authorization. Includes assertions verifying standard HTTP status codes and correct payloads."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product (Protected - JWT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Postman Test Earbuds Pro\",\n    \"price\": 99.99,\n    \"stock\": 35\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/products.php?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Modify existing product parameters using target ID parameter."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product (Protected - JWT)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/products.php?id=6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						},
+						"description": "Completely remove product record from database using targeted ID param."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Profiles",
+			"item": [
+				{
+					"name": "Get Profile Details (Protected)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/users.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users.php"
+							]
+						},
+						"description": "Fetch user profile details associated with the current authorized JWT token."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile (Protected)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John Doe Updated\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users.php"
+							]
+						},
+						"description": "Modify parameters (such as name or password) of the authenticated user."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders Resource",
+			"item": [
+				{
+					"name": "Place Order (Protected - Checkout)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shipping_address\": \"House 42, Innovation Park, Silicon Valley\",\n    \"items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 2\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 1\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/orders.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders.php"
+							]
+						},
+						"description": "Place a standard checkout order, deducting stock inside transactions and returning order lines."
+					},
+					"response": []
+				},
+				{
+					"name": "List My Orders (Protected)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/orders.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders.php"
+							]
+						},
+						"description": "View historical orders placed by the current customer."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order Details (Protected)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/orders.php?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "View detailed parameters, address, status, and sub-line items of a single order using order ID."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost/php_2026/Web%20Services%20and%20API/Assessment",
+			"type": "string"
+		},
+		{
+			"key": "jwt_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
