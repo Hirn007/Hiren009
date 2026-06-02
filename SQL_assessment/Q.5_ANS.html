@@ -1,0 +1,3379 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)http://localhost/phpmyadmin/index.php?route=/table/sql&db=nobel_prize_db&table=Nobel_win -->
+<html lang="en_GB" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow,notranslate">
+  <meta name="google" content="notranslate">
+  
+  <link rel="icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./Q.5_ANS_files/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="./Q.5_ANS_files/codemirror.css">
+  <link rel="stylesheet" type="text/css" href="./Q.5_ANS_files/show-hint.css">
+  <link rel="stylesheet" type="text/css" href="./Q.5_ANS_files/lint.css">
+  <link rel="stylesheet" type="text/css" href="./Q.5_ANS_files/theme.css">
+  <title>localhost / 127.0.0.1 / nobel_prize_db / Nobel_win | phpMyAdmin 5.2.1</title>
+    <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/jquery.min.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/jquery-migrate.min.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/sprintf.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/ajax.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/keyhandler.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/jquery-ui.min.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/name-conflict-fixes.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/bootstrap.bundle.min.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/js.cookie.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/jquery.validate.min.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/jquery-ui-timepicker-addon.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/jquery.debounce-1.0.6.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/menu_resizer.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/cross_framing_protection.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/messages.php"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/config.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/doclinks.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/functions.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/navigation.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/indexes.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/common.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/page_settings.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/home.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/codemirror.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/sql.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/runmode.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/show-hint.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/sql-hint.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/lint.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/sql-lint.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/tracekit.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/error_report.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/drag_drop_import.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/shortcuts_handler.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./Q.5_ANS_files/console.js.download"></script>
+
+<script data-cfasync="false" type="text/javascript">
+// <![CDATA[
+CommonParams.setAll({common_query:"lang=en",opendb_url:"index.php?route=/database/structure&lang=en",lang:"en",server:"1",table:"",db:"",token:"727c755d247366333c52723464624b57",text_dir:"ltr",LimitChars:"50",pftext:"",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",version:"5.2.1",auth_type:"config",user:"root"});
+var firstDayOfCalendar = '0';
+var themeImagePath = '.\/themes\/pmahomme\/img\/';
+var mysqlDocTemplate = '.\/url.php\u003Furl\u003Dhttps\u00253A\u00252F\u00252Fdev.mysql.com\u00252Fdoc\u00252Frefman\u00252F8.0\u00252Fen\u00252F\u002525s.html';
+var maxInputVars = 1000;
+
+if ($.datepicker) {
+  $.datepicker.regional[''].closeText = 'Done';
+  $.datepicker.regional[''].prevText = 'Prev';
+  $.datepicker.regional[''].nextText = 'Next';
+  $.datepicker.regional[''].currentText = 'Today';
+  $.datepicker.regional[''].monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  $.datepicker.regional[''].monthNamesShort = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+  $.datepicker.regional[''].dayNames = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+  $.datepicker.regional[''].dayNamesShort = [
+    'Sun',
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat',
+  ];
+  $.datepicker.regional[''].dayNamesMin = [
+    'Su',
+    'Mo',
+    'Tu',
+    'We',
+    'Th',
+    'Fr',
+    'Sa',
+  ];
+  $.datepicker.regional[''].weekHeader = 'Wk';
+  $.datepicker.regional[''].showMonthAfterYear = false;
+  $.datepicker.regional[''].yearSuffix = '';
+  $.extend($.datepicker._defaults, $.datepicker.regional['']);
+}
+
+if ($.timepicker) {
+  $.timepicker.regional[''].timeText = 'Time';
+  $.timepicker.regional[''].hourText = 'Hour';
+  $.timepicker.regional[''].minuteText = 'Minute';
+  $.timepicker.regional[''].secondText = 'Second';
+  $.extend($.timepicker._defaults, $.timepicker.regional['']);
+}
+
+function extendingValidatorMessages () {
+  $.extend($.validator.messages, {
+    required: 'This\u0020field\u0020is\u0020required',
+    remote: 'Please\u0020fix\u0020this\u0020field',
+    email: 'Please\u0020enter\u0020a\u0020valid\u0020email\u0020address',
+    url: 'Please\u0020enter\u0020a\u0020valid\u0020URL',
+    date: 'Please\u0020enter\u0020a\u0020valid\u0020date',
+    dateISO: 'Please\u0020enter\u0020a\u0020valid\u0020date\u0020\u0028ISO\u0029',
+    number: 'Please\u0020enter\u0020a\u0020valid\u0020number',
+    creditcard: 'Please\u0020enter\u0020a\u0020valid\u0020credit\u0020card\u0020number',
+    digits: 'Please\u0020enter\u0020only\u0020digits',
+    equalTo: 'Please\u0020enter\u0020the\u0020same\u0020value\u0020again',
+    maxlength: $.validator.format('Please\u0020enter\u0020no\u0020more\u0020than\u0020\u007B0\u007D\u0020characters'),
+    minlength: $.validator.format('Please\u0020enter\u0020at\u0020least\u0020\u007B0\u007D\u0020characters'),
+    rangelength: $.validator.format('Please\u0020enter\u0020a\u0020value\u0020between\u0020\u007B0\u007D\u0020and\u0020\u007B1\u007D\u0020characters\u0020long'),
+    range: $.validator.format('Please\u0020enter\u0020a\u0020value\u0020between\u0020\u007B0\u007D\u0020and\u0020\u007B1\u007D'),
+    max: $.validator.format('Please\u0020enter\u0020a\u0020value\u0020less\u0020than\u0020or\u0020equal\u0020to\u0020\u007B0\u007D'),
+    min: $.validator.format('Please\u0020enter\u0020a\u0020value\u0020greater\u0020than\u0020or\u0020equal\u0020to\u0020\u007B0\u007D'),
+    validationFunctionForDateTime: $.validator.format('Please\u0020enter\u0020a\u0020valid\u0020date\u0020or\u0020time'),
+    validationFunctionForHex: $.validator.format('Please\u0020enter\u0020a\u0020valid\u0020HEX\u0020input'),
+    validationFunctionForMd5: $.validator.format('This\u0020column\u0020can\u0020not\u0020contain\u0020a\u002032\u0020chars\u0020value'),
+    validationFunctionForAesDesEncrypt: $.validator.format('These\u0020functions\u0020are\u0020meant\u0020to\u0020return\u0020a\u0020binary\u0020result\u003B\u0020to\u0020avoid\u0020inconsistent\u0020results\u0020you\u0020should\u0020store\u0020it\u0020in\u0020a\u0020BINARY,\u0020VARBINARY,\u0020or\u0020BLOB\u0020column.')
+  });
+}
+
+ConsoleEnterExecutes=false
+
+AJAX.scriptHandler
+  .add('vendor/jquery/jquery.min.js', 0)
+  .add('vendor/jquery/jquery-migrate.min.js', 0)
+  .add('vendor/sprintf.js', 1)
+  .add('ajax.js', 0)
+  .add('keyhandler.js', 1)
+  .add('vendor/jquery/jquery-ui.min.js', 0)
+  .add('name-conflict-fixes.js', 1)
+  .add('vendor/bootstrap/bootstrap.bundle.min.js', 1)
+  .add('vendor/js.cookie.js', 1)
+  .add('vendor/jquery/jquery.validate.min.js', 0)
+  .add('vendor/jquery/jquery-ui-timepicker-addon.js', 0)
+  .add('vendor/jquery/jquery.debounce-1.0.6.js', 0)
+  .add('menu_resizer.js', 1)
+  .add('cross_framing_protection.js', 0)
+  .add('messages.php', 0)
+  .add('config.js', 1)
+  .add('doclinks.js', 1)
+  .add('functions.js', 1)
+  .add('navigation.js', 1)
+  .add('indexes.js', 1)
+  .add('common.js', 1)
+  .add('page_settings.js', 1)
+  .add('home.js', 1)
+  .add('vendor/codemirror/lib/codemirror.js', 0)
+  .add('vendor/codemirror/mode/sql/sql.js', 0)
+  .add('vendor/codemirror/addon/runmode/runmode.js', 0)
+  .add('vendor/codemirror/addon/hint/show-hint.js', 0)
+  .add('vendor/codemirror/addon/hint/sql-hint.js', 0)
+  .add('vendor/codemirror/addon/lint/lint.js', 0)
+  .add('codemirror/addon/lint/sql-lint.js', 0)
+  .add('vendor/tracekit.js', 1)
+  .add('error_report.js', 1)
+  .add('drag_drop_import.js', 1)
+  .add('shortcuts_handler.js', 1)
+  .add('console.js', 1)
+;
+$(function() {
+        AJAX.fireOnload('vendor/sprintf.js');
+        AJAX.fireOnload('keyhandler.js');
+        AJAX.fireOnload('name-conflict-fixes.js');
+      AJAX.fireOnload('vendor/bootstrap/bootstrap.bundle.min.js');
+      AJAX.fireOnload('vendor/js.cookie.js');
+            AJAX.fireOnload('menu_resizer.js');
+          AJAX.fireOnload('config.js');
+      AJAX.fireOnload('doclinks.js');
+      AJAX.fireOnload('functions.js');
+      AJAX.fireOnload('navigation.js');
+      AJAX.fireOnload('indexes.js');
+      AJAX.fireOnload('common.js');
+      AJAX.fireOnload('page_settings.js');
+      AJAX.fireOnload('home.js');
+                    AJAX.fireOnload('vendor/tracekit.js');
+      AJAX.fireOnload('error_report.js');
+      AJAX.fireOnload('drag_drop_import.js');
+      AJAX.fireOnload('shortcuts_handler.js');
+      AJAX.fireOnload('console.js');
+  });
+// ]]>
+</script>
+
+  <noscript><style>html{display:block}</style></noscript>
+<script type="text/javascript" src="./Q.5_ANS_files/databases.js.download"></script><script type="text/javascript" src="./Q.5_ANS_files/structure.js.download"></script><script type="text/javascript" src="./Q.5_ANS_files/change.js.download"></script><script type="text/javascript" src="./Q.5_ANS_files/makegrid.js.download"></script><script type="text/javascript" src="./Q.5_ANS_files/jquery.uitablefilter.js.download"></script><script type="text/javascript" src="./Q.5_ANS_files/sql(1).js.download"></script><script type="text/javascript" src="./Q.5_ANS_files/gis_data_editor.js.download"></script><script type="text/javascript" src="./Q.5_ANS_files/multi_column_sort.js.download"></script></head>
+<body style="margin-bottom: 21.4375px; margin-left: 0px; padding-top: 59.5625px; cursor: inherit;">
+    <div id="pma_navigation" class="d-print-none" data-config-navigation-width="0" style="width: 0px;">
+    <div id="pma_navigation_resizer" style="left: 0px;"></div>
+    <div id="pma_navigation_collapser" title="Show panel" style="left: 3px;">→</div>
+    <div id="pma_navigation_content">
+      <div id="pma_navigation_header">
+
+                  <div id="pmalogo">
+                          <a href="http://localhost/phpmyadmin/index.php?lang=en_GB">
+                                      <img id="imgpmalogo" src="./Q.5_ANS_files/logo_left.png" alt="phpMyAdmin">
+                                      </a>
+                      </div>
+        
+        <div id="navipanellinks">
+          <a href="http://localhost/phpmyadmin/index.php?route=/&amp;lang=en_GB" title="Home"><img src="./Q.5_ANS_files/dot.gif" title="Home" alt="Home" class="icon ic_b_home"></a>
+
+                      <a class="logout disableAjax" href="http://localhost/phpmyadmin/index.php?route=/logout&amp;lang=en_GB" title="Empty session data"><img src="./Q.5_ANS_files/dot.gif" title="Empty session data" alt="Empty session data" class="icon ic_s_loggoff"></a>
+          
+          <a href="http://localhost/phpmyadmin/doc/html/index.html" title="phpMyAdmin documentation" target="_blank" rel="noopener noreferrer"><img src="./Q.5_ANS_files/dot.gif" title="phpMyAdmin documentation" alt="phpMyAdmin documentation" class="icon ic_b_docs"></a>
+
+          <a href="http://localhost/phpmyadmin/url.php?url=https%3A%2F%2Fmariadb.com%2Fkb%2Fen%2Fdocumentation%2F" title="MariaDB Documentation" target="_blank" rel="noopener noreferrer"><img src="./Q.5_ANS_files/dot.gif" title="MariaDB Documentation" alt="MariaDB Documentation" class="icon ic_b_sqlhelp"></a>
+
+          <a id="pma_navigation_settings_icon" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#" title="Navigation panel settings"><img src="./Q.5_ANS_files/dot.gif" title="Navigation panel settings" alt="Navigation panel settings" class="icon ic_s_cog"></a>
+
+          <a id="pma_navigation_reload" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#" title="Reload navigation panel"><img src="./Q.5_ANS_files/dot.gif" title="Reload navigation panel" alt="Reload navigation panel" class="icon ic_s_reload"></a>
+        </div>
+
+        
+        <img src="./Q.5_ANS_files/dot.gif" title="Loading…" alt="Loading…" style="visibility: hidden; display:none" class="icon ic_ajax_clock_small throbber">
+      </div>
+      <div id="pma_navigation_tree" class="list_container synced highlight autoexpand" style="height: 487.875px;">
+  <div class="pma_quick_warp">
+    <div class="drop_list"><button title="Recent tables" class="drop_button btn">Recent</button><ul id="pma_recent_list"><li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=nobel_prize_db&amp;table=Nobel_win">
+    `nobel_prize_db`.`Nobel_win`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=nobel_prize_db&amp;table=nobel_win">
+    `nobel_prize_db`.`nobel_win`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=creator_merch_store&amp;table=products">
+    `creator_merch_store`.`products`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=practice&amp;table=suppliers">
+    `practice`.`suppliers`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=practice&amp;table=customers">
+    `practice`.`customers`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=practice&amp;table=categories">
+    `practice`.`categories`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=techedge_motors&amp;table=customer_complaints">
+    `techedge_motors`.`customer_complaints`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=practice&amp;table=products">
+    `practice`.`products`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=laravel&amp;table=admins">
+    `laravel`.`admins`
+  </a>
+</li>
+<li class="warp_link">
+  <a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=laravel&amp;table=users">
+    `laravel`.`users`
+  </a>
+</li>
+</ul></div>    <div class="drop_list"><button title="Favourite tables" class="drop_button btn">Favourites</button><ul id="pma_favorite_list"><li class="warp_link">
+            There are no favourite tables.    </li>
+</ul></div>    <div class="clearfloat"></div>
+</div>
+
+
+<div class="clearfloat"></div>
+
+<ul>
+  
+  <!-- CONTROLS START -->
+<li id="navigation_controls_outer">
+    <div id="navigation_controls">
+        <a href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#" id="pma_navigation_collapse" title="Collapse all"><img src="./Q.5_ANS_files/dot.gif" title="Collapse all" alt="Collapse all" class="icon ic_s_collapseall"></a>
+        <a href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#" id="pma_navigation_sync" title="Unlink from main panel"><img src="./Q.5_ANS_files/dot.gif" title="Unlink from main panel" alt="Unlink from main panel" class="icon ic_s_link"></a>
+    </div>
+</li>
+<!-- CONTROLS ENDS -->
+
+</ul>
+
+
+
+<div id="pma_navigation_tree_content" style="height: 404px;">
+  <ul>
+      <li class="first new_database italics">
+    <div class="block">
+      <i class="first"></i>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/server/databases"><img src="./Q.5_ANS_files/dot.gif" title="New" alt="New" class="icon ic_b_newdb"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/server/databases" title="New">New</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.Ym9va215c2hvd19kYg==" data-vpath="cm9vdA==.Ym9va215c2hvd19kYg==" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=bookmyshow_db"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=bookmyshow_db" title="Structure">bookmyshow_db</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.Y29mZmVfc2hvcGU=" data-vpath="cm9vdA==.Y29mZmVfc2hvcGU=" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=coffe_shope"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=coffe_shope" title="Structure">coffe_shope</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.Y3JlYXRvcl9tZXJjaF9zdG9yZQ==" data-vpath="cm9vdA==.Y3JlYXRvcl9tZXJjaF9zdG9yZQ==" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=creator_merch_store"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=creator_merch_store" title="Structure">creator_merch_store</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.ZWNvbW1lcmNlX2Ri" data-vpath="cm9vdA==.ZWNvbW1lcmNlX2Ri" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=ecommerce_db"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=ecommerce_db" title="Structure">ecommerce_db</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h" data-vpath="cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=information_schema"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=information_schema" title="Structure">information_schema</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="navGroup">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander loaded container" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==" data-vpath="cm9vdA==.bGFyYXZlbA==" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+          <div class="fst-italic">
+    
+          <div class="block second">
+        <u><img src="./Q.5_ANS_files/dot.gif" title="Groups" alt="Groups" class="icon ic_b_group"></u>
+      </div>
+      &nbsp;laravel
+    
+    
+
+          </div>
+    
+    <div class="clearfloat"></div>
+
+  <div class="list_container" style="display: none;">
+    <ul>
+  <li class="database database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.bGFyYXZlbA==" data-vpath="cm9vdA==.bGFyYXZlbA==." data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=laravel"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=laravel" title="Structure">laravel</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database last database">
+    <div class="block">
+      <i></i>
+              
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.bGFyYXZlbF9wcm9qZWN0" data-vpath="cm9vdA==.bGFyYXZlbA==.cHJvamVjdA==" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=laravel_project"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=laravel_project" title="Structure">laravel_project</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+
+    </ul>
+  </div>
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.bXlzcWw=" data-vpath="cm9vdA==.bXlzcWw=" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=mysql"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=mysql" title="Structure">mysql</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander loaded" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.bm9iZWxfcHJpemVfZGI=" data-vpath="cm9vdA==.bm9iZWxfcHJpemVfZGI=" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="" alt="" class="icon ic_b_minus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=nobel_prize_db"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=nobel_prize_db" title="Structure">nobel_prize_db</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+  <div class="list_container">
+    <ul>
+  <span class="hide pos2_nav" data-name="tables" data-value="0"></span>
+
+  <li class="new_table italics new_table italics">
+    <div class="block">
+      <i></i>
+              <span class="hide pos2_nav" data-name="tables" data-value="0"></span>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/table/create&amp;db=nobel_prize_db"><img src="./Q.5_ANS_files/dot.gif" title="New" alt="New" class="icon ic_b_table_add"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/table/create&amp;db=nobel_prize_db" title="New">New</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="nav_node_table last nav_node_table">
+    <div class="block">
+      <i></i>
+              
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.bm9iZWxfcHJpemVfZGI=.dGFibGVz.bm9iZWxfd2lu" data-vpath="cm9vdA==.bm9iZWxfcHJpemVfZGI=.VGFibGVz.bm9iZWxfd2lu" data-pos="0"></span>
+                      <span class="hide pos2_nav" data-name="tables" data-value="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;db=nobel_prize_db&amp;table=nobel_win"><img src="./Q.5_ANS_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/sql&amp;pos=0&amp;db=nobel_prize_db&amp;table=nobel_win" title="Browse">nobel_win</a>
+          
+    <span class="navItemControls"><a href="http://localhost/phpmyadmin/index.php?route=/navigation" data-post="hideNavItem=1&amp;itemType=table&amp;itemName=nobel_win&amp;dbName=nobel_prize_db" class="hideNavItem ajax"><img src="./Q.5_ANS_files/dot.gif" title="Hide" alt="Hide" class="icon ic_hide"></a></span>
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+
+
+
+    </ul>
+  </div>
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h" data-vpath="cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=performance_schema"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=performance_schema" title="Structure">performance_schema</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.cGhwbXlhZG1pbg==" data-vpath="cm9vdA==.cGhwbXlhZG1pbg==" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=phpmyadmin"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=phpmyadmin" title="Structure">phpmyadmin</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.cHJhY3RpY2U=" data-vpath="cm9vdA==.cHJhY3RpY2U=" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=practice"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=practice" title="Structure">practice</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.c21hcnRfc3RvcmU=" data-vpath="cm9vdA==.c21hcnRfc3RvcmU=" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=smart_store"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=smart_store" title="Structure">smart_store</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="navGroup">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander loaded container" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==" data-vpath="cm9vdA==.dGVjaGVkZ2U=" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+          <div class="fst-italic">
+    
+          <div class="block second">
+        <u><img src="./Q.5_ANS_files/dot.gif" title="Groups" alt="Groups" class="icon ic_b_group"></u>
+      </div>
+      &nbsp;techedge
+    
+    
+
+          </div>
+    
+    <div class="clearfloat"></div>
+
+  <div class="list_container" style="display: none;">
+    <ul>
+  <li class="database database">
+    <div class="block">
+      <i></i>
+              <b></b>
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.dGVjaGVkZ2U=" data-vpath="cm9vdA==.dGVjaGVkZ2U=." data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=techedge"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=techedge" title="Structure">techedge</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+  <li class="database last database">
+    <div class="block">
+      <i></i>
+              
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.dGVjaGVkZ2VfbW90b3Jz" data-vpath="cm9vdA==.dGVjaGVkZ2U=.bW90b3Jz" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=techedge_motors"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=techedge_motors" title="Structure">techedge_motors</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+
+    </ul>
+  </div>
+
+  </li>
+  <li class="last database">
+    <div class="block">
+      <i></i>
+              
+        <a class="expander" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#">
+          <span class="hide paths_nav" data-apath="cm9vdA==.dGVzdA==" data-vpath="cm9vdA==.dGVzdA==" data-pos="0"></span>
+                    <img src="./Q.5_ANS_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus">
+        </a>
+          </div>
+    
+          <div class="block second">
+                  <a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=test"><img src="./Q.5_ANS_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a>
+              </div>
+
+              <a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=test" title="Structure">test</a>
+          
+    
+
+    
+    <div class="clearfloat"></div>
+
+
+
+  </li>
+
+  </ul>
+</div>
+
+
+</div>
+
+      <div id="pma_navi_settings_container">
+                  
+              <div id="pma_navigation_settings" class="" style=""><div class="page_settings"><form method="post" action="http://localhost/phpmyadmin/index.php?route=%2Ftable%2Fsql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;server=1" class="config-form disableAjax">
+  <input type="hidden" name="tab_hash" value="">
+      <input type="hidden" name="check_page_refresh" id="check_page_refresh" value="1">
+    <input type="hidden" name="lang" value="en_GB"><input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+  <input type="hidden" name="submit_save" value="Navi">
+
+  <ul class="nav nav-tabs" id="configFormDisplayTab" role="tablist">
+          <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="Navi_panel-tab" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#Navi_panel" data-bs-toggle="tab" role="tab" aria-controls="Navi_panel" aria-selected="true">Navigation panel</a>
+      </li>
+          <li class="nav-item" role="presentation">
+        <a class="nav-link" id="Navi_tree-tab" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#Navi_tree" data-bs-toggle="tab" role="tab" aria-controls="Navi_tree" aria-selected="false" tabindex="-1">Navigation tree</a>
+      </li>
+          <li class="nav-item" role="presentation">
+        <a class="nav-link" id="Navi_servers-tab" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#Navi_servers" data-bs-toggle="tab" role="tab" aria-controls="Navi_servers" aria-selected="false" tabindex="-1">Servers</a>
+      </li>
+          <li class="nav-item" role="presentation">
+        <a class="nav-link" id="Navi_databases-tab" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#Navi_databases" data-bs-toggle="tab" role="tab" aria-controls="Navi_databases" aria-selected="false" tabindex="-1">Databases</a>
+      </li>
+          <li class="nav-item" role="presentation">
+        <a class="nav-link" id="Navi_tables-tab" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#Navi_tables" data-bs-toggle="tab" role="tab" aria-controls="Navi_tables" aria-selected="false" tabindex="-1">Tables</a>
+      </li>
+      </ul>
+  <div class="tab-content">
+          <div class="tab-pane fade show active" id="Navi_panel" role="tabpanel" aria-labelledby="Navi_panel-tab">
+        <div class="card border-top-0">
+          <div class="card-body">
+            <h5 class="card-title visually-hidden">Navigation panel</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Customise appearance of the navigation panel.</h6>
+            
+            <fieldset class="optbox">
+              <legend>Navigation panel</legend>
+
+                            
+              <table class="table table-borderless">
+                <tbody><tr>
+  <th>
+    <label for="ShowDatabasesNavigationAsTree">Show databases navigation as tree</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowDatabasesNavigationAsTree" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>In the navigation panel, replaces the database tree with a selector</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="ShowDatabasesNavigationAsTree" id="ShowDatabasesNavigationAsTree" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#ShowDatabasesNavigationAsTree" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationLinkWithMainPanel">Link with main panel</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLinkWithMainPanel" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Link with main panel by highlighting the current database or table.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationLinkWithMainPanel" id="NavigationLinkWithMainPanel" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationLinkWithMainPanel" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationDisplayLogo">Display logo</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationDisplayLogo" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Show logo in navigation panel.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationDisplayLogo" id="NavigationDisplayLogo" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationDisplayLogo" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationLogoLink">Logo link URL</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLogoLink" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>URL where logo in the navigation panel will point to.</small>
+      </th>
+
+  <td>
+          <input type="text" name="NavigationLogoLink" id="NavigationLogoLink" value="index.php" class="w-75">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationLogoLink" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationLogoLinkWindow">Logo link target</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLogoLinkWindow" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Open the linked page in the main window (<code>main</code>) or in a new one (<code>new</code>).</small>
+      </th>
+
+  <td>
+          <select name="NavigationLogoLinkWindow" id="NavigationLogoLinkWindow" class="w-75">
+                            <option value="main" selected="">main</option>
+                            <option value="new">new</option>
+              </select>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationLogoLinkWindow" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreePointerEnable">Enable highlighting</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreePointerEnable" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Highlight server under the mouse cursor.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreePointerEnable" id="NavigationTreePointerEnable" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreePointerEnable" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="FirstLevelNavigationItems">Maximum items on first level</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_FirstLevelNavigationItems" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>The number of items that can be displayed on each page on the first level of the navigation tree.</small>
+      </th>
+
+  <td>
+          <input type="number" name="FirstLevelNavigationItems" id="FirstLevelNavigationItems" value="100" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#FirstLevelNavigationItems" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeDisplayItemFilterMinimum">Minimum number of items to display the filter box</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDisplayItemFilterMinimum" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Defines the minimum number of items (tables, views, routines and events) to display a filter box.</small>
+      </th>
+
+  <td>
+          <input type="number" name="NavigationTreeDisplayItemFilterMinimum" id="NavigationTreeDisplayItemFilterMinimum" value="30" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeDisplayItemFilterMinimum" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NumRecentTables">Recently used tables</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NumRecentTables" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Maximum number of recently used tables; set 0 to disable.</small>
+      </th>
+
+  <td>
+          <input type="number" name="NumRecentTables" id="NumRecentTables" value="10" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NumRecentTables" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NumFavoriteTables">Favourite tables</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NumFavoriteTables" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Maximum number of favourite tables; set 0 to disable.</small>
+      </th>
+
+  <td>
+          <input type="number" name="NumFavoriteTables" id="NumFavoriteTables" value="10" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NumFavoriteTables" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationWidth">Navigation panel width</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationWidth" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Set to 0 to collapse navigation panel.</small>
+      </th>
+
+  <td>
+          <input type="number" name="NavigationWidth" id="NavigationWidth" value="0" class="custom">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationWidth" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload"></a>
+    
+          </td>
+
+  </tr>
+
+              </tbody></table>
+            </fieldset>
+          </div>
+
+                  </div>
+      </div>
+          <div class="tab-pane fade" id="Navi_tree" role="tabpanel" aria-labelledby="Navi_tree-tab">
+        <div class="card border-top-0">
+          <div class="card-body">
+            <h5 class="card-title visually-hidden">Navigation tree</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Customise the navigation tree.</h6>
+            
+            <fieldset class="optbox">
+              <legend>Navigation tree</legend>
+
+                            
+              <table class="table table-borderless">
+                <tbody><tr>
+  <th>
+    <label for="MaxNavigationItems">Maximum items in branch</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_MaxNavigationItems" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>The number of items that can be displayed on each page of the navigation tree.</small>
+      </th>
+
+  <td>
+          <input type="number" name="MaxNavigationItems" id="MaxNavigationItems" value="50" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#MaxNavigationItems" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeEnableGrouping">Group items in the tree</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeEnableGrouping" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Group items in the navigation tree (determined by the separator defined in the Databases and Tables tabs above).</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreeEnableGrouping" id="NavigationTreeEnableGrouping" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeEnableGrouping" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeEnableExpansion">Enable navigation tree expansion</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeEnableExpansion" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Whether to offer the possibility of tree expansion in the navigation panel.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreeEnableExpansion" id="NavigationTreeEnableExpansion" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeEnableExpansion" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeShowTables">Show tables in tree</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowTables" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Whether to show tables under database in the navigation tree</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreeShowTables" id="NavigationTreeShowTables" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeShowTables" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeShowViews">Show views in tree</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowViews" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Whether to show views under database in the navigation tree</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreeShowViews" id="NavigationTreeShowViews" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeShowViews" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeShowFunctions">Show functions in tree</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowFunctions" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Whether to show functions under database in the navigation tree</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreeShowFunctions" id="NavigationTreeShowFunctions" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeShowFunctions" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeShowProcedures">Show procedures in tree</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowProcedures" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Whether to show procedures under database in the navigation tree</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreeShowProcedures" id="NavigationTreeShowProcedures" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeShowProcedures" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeShowEvents">Show events in tree</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowEvents" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Whether to show events under database in the navigation tree</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreeShowEvents" id="NavigationTreeShowEvents" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeShowEvents" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeAutoexpandSingleDb">Expand single database</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeAutoexpandSingleDb" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Whether to expand single database in the navigation tree automatically.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationTreeAutoexpandSingleDb" id="NavigationTreeAutoexpandSingleDb" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeAutoexpandSingleDb" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+
+              </tbody></table>
+            </fieldset>
+          </div>
+
+                  </div>
+      </div>
+          <div class="tab-pane fade" id="Navi_servers" role="tabpanel" aria-labelledby="Navi_servers-tab">
+        <div class="card border-top-0">
+          <div class="card-body">
+            <h5 class="card-title visually-hidden">Servers</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Servers display options.</h6>
+            
+            <fieldset class="optbox">
+              <legend>Servers</legend>
+
+                            
+              <table class="table table-borderless">
+                <tbody><tr>
+  <th>
+    <label for="NavigationDisplayServers">Display servers selection</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationDisplayServers" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Display server choice at the top of the navigation panel.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="NavigationDisplayServers" id="NavigationDisplayServers" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationDisplayServers" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="DisplayServersList">Display servers as a list</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DisplayServersList" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Show server listing as a list instead of a drop down.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="DisplayServersList" id="DisplayServersList">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#DisplayServersList" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+
+              </tbody></table>
+            </fieldset>
+          </div>
+
+                  </div>
+      </div>
+          <div class="tab-pane fade" id="Navi_databases" role="tabpanel" aria-labelledby="Navi_databases-tab">
+        <div class="card border-top-0">
+          <div class="card-body">
+            <h5 class="card-title visually-hidden">Databases</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Databases display options.</h6>
+            
+            <fieldset class="optbox">
+              <legend>Databases</legend>
+
+                            
+              <table class="table table-borderless">
+                <tbody><tr>
+  <th>
+    <label for="NavigationTreeDisplayDbFilterMinimum">Minimum number of databases to display the database filter box</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDisplayDbFilterMinimum" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+      </th>
+
+  <td>
+          <input type="number" name="NavigationTreeDisplayDbFilterMinimum" id="NavigationTreeDisplayDbFilterMinimum" value="30" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeDisplayDbFilterMinimum" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeDbSeparator">Database tree separator</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDbSeparator" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>String that separates databases into different tree levels.</small>
+      </th>
+
+  <td>
+                <input type="text" size="25" name="NavigationTreeDbSeparator" id="NavigationTreeDbSeparator" value="_" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeDbSeparator" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+
+              </tbody></table>
+            </fieldset>
+          </div>
+
+                  </div>
+      </div>
+          <div class="tab-pane fade" id="Navi_tables" role="tabpanel" aria-labelledby="Navi_tables-tab">
+        <div class="card border-top-0">
+          <div class="card-body">
+            <h5 class="card-title visually-hidden">Tables</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Tables display options.</h6>
+            
+            <fieldset class="optbox">
+              <legend>Tables</legend>
+
+                            
+              <table class="table table-borderless">
+                <tbody><tr>
+  <th>
+    <label for="NavigationTreeDefaultTabTable">Target for quick access icon</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDefaultTabTable" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+      </th>
+
+  <td>
+          <select name="NavigationTreeDefaultTabTable" id="NavigationTreeDefaultTabTable" class="w-75">
+                            <option value="structure" selected="">Structure</option>
+                            <option value="sql">SQL</option>
+                            <option value="search">Search</option>
+                            <option value="insert">Insert</option>
+                            <option value="browse">Browse</option>
+              </select>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeDefaultTabTable" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeDefaultTabTable2">Target for second quick access icon</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDefaultTabTable2" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+      </th>
+
+  <td>
+          <select name="NavigationTreeDefaultTabTable2" id="NavigationTreeDefaultTabTable2" class="w-75">
+                            <option value="" selected=""></option>
+                            <option value="structure">Structure</option>
+                            <option value="sql">SQL</option>
+                            <option value="search">Search</option>
+                            <option value="insert">Insert</option>
+                            <option value="browse">Browse</option>
+              </select>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeDefaultTabTable2" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeTableSeparator">Table tree separator</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeTableSeparator" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>String that separates tables into different tree levels.</small>
+      </th>
+
+  <td>
+                <input type="text" size="25" name="NavigationTreeTableSeparator" id="NavigationTreeTableSeparator" value="__" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeTableSeparator" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="NavigationTreeTableLevel">Maximum table tree depth</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeTableLevel" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+      </th>
+
+  <td>
+          <input type="number" name="NavigationTreeTableLevel" id="NavigationTreeTableLevel" value="1" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#NavigationTreeTableLevel" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+
+              </tbody></table>
+            </fieldset>
+          </div>
+
+                  </div>
+      </div>
+      </div>
+</form>
+
+<script type="text/javascript">
+  if (typeof configInlineParams === 'undefined' || !Array.isArray(configInlineParams)) {
+    configInlineParams = [];
+  }
+  configInlineParams.push(function () {
+    registerFieldValidator('FirstLevelNavigationItems', 'validatePositiveNumber', true);
+registerFieldValidator('NavigationTreeDisplayItemFilterMinimum', 'validatePositiveNumber', true);
+registerFieldValidator('NumRecentTables', 'validateNonNegativeNumber', true);
+registerFieldValidator('NumFavoriteTables', 'validateNonNegativeNumber', true);
+registerFieldValidator('NavigationWidth', 'validateNonNegativeNumber', true);
+registerFieldValidator('MaxNavigationItems', 'validatePositiveNumber', true);
+registerFieldValidator('NavigationTreeTableLevel', 'validatePositiveNumber', true);
+
+    $.extend(Messages, {
+      'error_nan_p': 'Not\u0020a\u0020positive\u0020number\u0021',
+      'error_nan_nneg': 'Not\u0020a\u0020non\u002Dnegative\u0020number\u0021',
+      'error_incorrect_port': 'Not\u0020a\u0020valid\u0020port\u0020number\u0021',
+      'error_invalid_value': 'Incorrect\u0020value\u0021',
+      'error_value_lte': 'Value\u0020must\u0020be\u0020less\u0020than\u0020or\u0020equal\u0020to\u0020\u0025s\u0021',
+    });
+
+    $.extend(defaultValues, {
+      'ShowDatabasesNavigationAsTree': true,
+      'NavigationLinkWithMainPanel': true,
+      'NavigationDisplayLogo': true,
+      'NavigationLogoLink': 'index.php',
+      'NavigationLogoLinkWindow': ['main'],
+      'NavigationTreePointerEnable': true,
+      'FirstLevelNavigationItems': '100',
+      'NavigationTreeDisplayItemFilterMinimum': '30',
+      'NumRecentTables': '10',
+      'NumFavoriteTables': '10',
+      'NavigationWidth': '240',
+      'MaxNavigationItems': '50',
+      'NavigationTreeEnableGrouping': true,
+      'NavigationTreeEnableExpansion': true,
+      'NavigationTreeShowTables': true,
+      'NavigationTreeShowViews': true,
+      'NavigationTreeShowFunctions': true,
+      'NavigationTreeShowProcedures': true,
+      'NavigationTreeShowEvents': true,
+      'NavigationTreeAutoexpandSingleDb': true,
+      'NavigationDisplayServers': true,
+      'DisplayServersList': false,
+      'NavigationTreeDisplayDbFilterMinimum': '30',
+      'NavigationTreeDbSeparator': '_',
+      'NavigationTreeDefaultTabTable': ['structure'],
+      'NavigationTreeDefaultTabTable2': [''],
+      'NavigationTreeTableSeparator': '__',
+      'NavigationTreeTableLevel': '1'
+    });
+  });
+  if (typeof configScriptLoaded !== 'undefined' && configInlineParams) {
+    loadInlineConfig();
+  }
+</script>
+</div></div></div>
+    </div>
+
+          <div class="pma_drop_handler">
+        Drop files here      </div>
+      <div class="pma_sql_import_status">
+        <h2>
+          SQL upload          ( <span class="pma_import_count">0</span> )
+          <span class="close">x</span>
+          <span class="minimize">-</span>
+        </h2>
+        <div></div>
+      </div>
+      </div>
+  <div class="modal fade" id="unhideNavItemModal" tabindex="-1" aria-labelledby="unhideNavItemModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="unhideNavItemModalLabel">Show hidden navigation tree items.</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="createViewModal" tabindex="-1" aria-labelledby="createViewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" id="createViewModalDialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createViewModalLabel">Create view</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="createViewModalGoButton">Go</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+  
+
+  
+      
+  
+      <div id="floating_menubar" class="d-print-none" style="margin-left: 3px; left: 0px; position: fixed; top: 0px; width: 100%; z-index: 99;">
+<nav id="server-breadcrumb" aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-navbar">
+    <li class="breadcrumb-item">
+      <img src="./Q.5_ANS_files/dot.gif" title="" alt="" class="icon ic_s_host">
+      <a href="http://localhost/phpmyadmin/index.php?route=/" data-raw-text="127.0.0.1" draggable="false">
+        Server:        127.0.0.1
+      </a>
+    </li>
+
+          <li class="breadcrumb-item">
+        <img src="./Q.5_ANS_files/dot.gif" title="" alt="" class="icon ic_s_db">
+        <a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=nobel_prize_db" data-raw-text="nobel_prize_db" draggable="false">
+          Database:          nobel_prize_db
+        </a>
+      </li>
+
+              <li class="breadcrumb-item">
+          <img src="./Q.5_ANS_files/dot.gif" title="" alt="" class="icon ic_s_tbl">
+          <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win" data-raw-text="Nobel_win" draggable="false">
+                                          Table:                                      Nobel_win
+          </a>
+        </li>
+
+                    </ol>
+</nav>
+<div id="topmenucontainer" class="menucontainer">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation" aria-controls="navbarNav" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="width: auto; overflow: visible;">
+      <ul id="topmenu" class="navbar-nav">
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;pos=0">
+              <img src="./Q.5_ANS_files/dot.gif" title="Browse" alt="Browse" class="icon ic_b_browse">&nbsp;Browse
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;db=nobel_prize_db&amp;table=Nobel_win">
+              <img src="./Q.5_ANS_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props">&nbsp;Structure
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win">
+              <img src="./Q.5_ANS_files/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql">&nbsp;SQL
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/search&amp;db=nobel_prize_db&amp;table=Nobel_win">
+              <img src="./Q.5_ANS_files/dot.gif" title="Search" alt="Search" class="icon ic_b_search">&nbsp;Search
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/change&amp;db=nobel_prize_db&amp;table=Nobel_win">
+              <img src="./Q.5_ANS_files/dot.gif" title="Insert" alt="Insert" class="icon ic_b_insrow">&nbsp;Insert
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/export&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;single_table=true">
+              <img src="./Q.5_ANS_files/dot.gif" title="Export" alt="Export" class="icon ic_b_tblexport">&nbsp;Export
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/import&amp;db=nobel_prize_db&amp;table=Nobel_win">
+              <img src="./Q.5_ANS_files/dot.gif" title="Import" alt="Import" class="icon ic_b_tblimport">&nbsp;Import
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/server/privileges&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;checkprivsdb=nobel_prize_db&amp;checkprivstable=Nobel_win&amp;viewing_mode=table">
+              <img src="./Q.5_ANS_files/dot.gif" title="Privileges" alt="Privileges" class="icon ic_s_rights">&nbsp;Privileges
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/operations&amp;db=nobel_prize_db&amp;table=Nobel_win">
+              <img src="./Q.5_ANS_files/dot.gif" title="Operations" alt="Operations" class="icon ic_b_tblops">&nbsp;Operations
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/tracking&amp;db=nobel_prize_db&amp;table=Nobel_win">
+              <img src="./Q.5_ANS_files/dot.gif" title="Tracking" alt="Tracking" class="icon ic_eye">&nbsp;Tracking
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/table/triggers&amp;db=nobel_prize_db&amp;table=Nobel_win">
+              <img src="./Q.5_ANS_files/dot.gif" title="Triggers" alt="Triggers" class="icon ic_b_triggers">&nbsp;Triggers
+                          </a>
+          </li>
+              <li class="nav-item dropdown d-none" style=""><a href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img alt="" title="" src="./Q.5_ANS_files/dot.gif" class="icon ic_b_more">More</a><ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"></ul></li></ul>
+    </div>
+  </nav>
+</div>
+</div>
+
+
+
+    <span id="page_nav_icons" class="d-print-none">
+      <span id="lock_page_icon"></span>
+      <span id="page_settings_icon" style="display: inline;">
+        <img src="./Q.5_ANS_files/dot.gif" title="Page-related settings" alt="Page-related settings" class="icon ic_s_cog">
+      </span>
+      <a id="goto_pagetop" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#"><img src="./Q.5_ANS_files/dot.gif" title="Click on the bar to scroll to top of page" alt="Click on the bar to scroll to top of page" class="icon ic_s_top"></a>
+    </span>
+  
+  <div id="pma_console_container" class="d-print-none">
+    <div id="pma_console" style="margin-left: 3px;">
+                <div class="toolbar collapsed">
+                    <div class="switch_button console_switch">
+            <img src="./Q.5_ANS_files/dot.gif" title="SQL Query Console" alt="SQL Query Console" class="icon ic_console">
+            <span>Console</span>
+        </div>
+                            <div class="button clear">
+            
+            <span>Clear</span>
+        </div>
+                            <div class="button history">
+            
+            <span>History</span>
+        </div>
+                            <div class="button options">
+            
+            <span>Options</span>
+        </div>
+                            <div class="button bookmarks">
+            
+            <span>Bookmarks</span>
+        </div>
+                            <div class="button debug hide">
+            
+            <span>Debug SQL</span>
+        </div>
+            </div>
+                <div class="content" style="height: 98.248px; margin-bottom: -98.2344px; display: none;">
+            <div class="console_message_container">
+                <div class="message welcome binded">
+                    <span id="instructions-0">
+                        Press Ctrl+Enter to execute query                    </span>
+                    <span class="hide" id="instructions-1">
+                        Press Enter to execute query                    </span>
+                </div>
+                            <div class="message collapsed binded successed" msgid="896147406245"><div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span></span>
+                    </span>
+                            <span class="text query_time" title="Tue Jun 02 2026 15:30:59 GMT+0530 (India Standard Time)">
+            Queried time
+                            : <span>15:30:59</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">CREATE</span> <span class="cm-keyword">TABLE</span> Nobel_win <span class="cm-bracket">(</span>
+    <span class="cm-type">year</span> <span class="cm-type">INT</span><span class="cm-punctuation">,</span>
+    subject <span class="cm-type">VARCHAR</span><span class="cm-bracket">(</span><span class="cm-number">50</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+    winner <span class="cm-type">VARCHAR</span><span class="cm-bracket">(</span><span class="cm-number">100</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+    country <span class="cm-type">VARCHAR</span><span class="cm-bracket">(</span><span class="cm-number">50</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+    category <span class="cm-type">VARCHAR</span><span class="cm-bracket">(</span><span class="cm-number">50</span><span class="cm-bracket">)</span>
+<span class="cm-bracket">)</span><span class="cm-punctuation">;</span></div></div><div class="message collapsed binded successed" msgid="178133446588"><div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span></span>
+                    </span>
+                            <span class="text query_time" title="Tue Jun 02 2026 15:31:11 GMT+0530 (India Standard Time)">
+            Queried time
+                            : <span>15:31:11</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">INSERT</span> <span class="cm-keyword">INTO</span> Nobel_win <span class="cm-bracket">(</span><span class="cm-type">year</span><span class="cm-punctuation">,</span> subject<span class="cm-punctuation">,</span> winner<span class="cm-punctuation">,</span> country<span class="cm-punctuation">,</span> category<span class="cm-bracket">)</span>
+<span class="cm-keyword">VALUES</span>
+<span class="cm-bracket">(</span><span class="cm-number">1970</span><span class="cm-punctuation">,</span> <span class="cm-string">'Physics'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Hannes Alfven'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Sweden'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Scientist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1970</span><span class="cm-punctuation">,</span> <span class="cm-string">'Chemistry'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Luis Federico Leloir'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Argentina'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Scientist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1970</span><span class="cm-punctuation">,</span> <span class="cm-string">'Literature'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Aleksandr Solzhenitsyn'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Russia'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Writer'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1970</span><span class="cm-punctuation">,</span> <span class="cm-string">'Economics'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Paul Samuelson'</span><span class="cm-punctuation">,</span> <span class="cm-string">'USA'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Economist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1965</span><span class="cm-punctuation">,</span> <span class="cm-string">'Chemistry'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Robert Burns Woodward'</span><span class="cm-punctuation">,</span> <span class="cm-string">'USA'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Scientist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1968</span><span class="cm-punctuation">,</span> <span class="cm-string">'Chemistry'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Luis Walter Alvarez'</span><span class="cm-punctuation">,</span> <span class="cm-string">'USA'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Scientist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1972</span><span class="cm-punctuation">,</span> <span class="cm-string">'Chemistry'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Christian B. Anfinsen'</span><span class="cm-punctuation">,</span> <span class="cm-string">'USA'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Scientist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1975</span><span class="cm-punctuation">,</span> <span class="cm-string">'Chemistry'</span><span class="cm-punctuation">,</span> <span class="cm-string">'John Cornforth'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Australia'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Scientist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1974</span><span class="cm-punctuation">,</span> <span class="cm-string">'Peace'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Sean MacBride'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Ireland'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Peace Activist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span>
+<span class="cm-bracket">(</span><span class="cm-number">1980</span><span class="cm-punctuation">,</span> <span class="cm-string">'Physics'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Louis Neel'</span><span class="cm-punctuation">,</span> <span class="cm-string">'France'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Scientist'</span><span class="cm-bracket">)</span><span class="cm-punctuation">;</span></div></div><div class="message collapsed binded select successed" msgid="821556845389" targetdb="nobel_prize_db" targettable="nobel_win"><div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>nobel_prize_db</span>
+                    </span>
+                            <span class="text query_time" title="Tue Jun 02 2026 15:31:38 GMT+0530 (India Standard Time)">
+            Queried time
+                            : <span>15:31:38</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `nobel_win`</div></div><div class="message collapsed binded select successed" msgid="336148591294" targetdb="nobel_prize_db" targettable="Nobel_win"><div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>nobel_prize_db</span>
+                    </span>
+                            <span class="text query_time" title="Tue Jun 02 2026 15:34:19 GMT+0530 (India Standard Time)">
+            Queried time
+                            : <span>15:34:19</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-type">year</span><span class="cm-punctuation">,</span> subject<span class="cm-punctuation">,</span> winner
+<span class="cm-keyword">FROM</span> Nobel_win
+<span class="cm-keyword">WHERE</span> <span class="cm-type">year</span> <span class="cm-operator">=</span> <span class="cm-number">1970</span><span class="cm-punctuation">;</span></div></div><div class="message collapsed binded select successed" msgid="340134413435" targetdb="nobel_prize_db" targettable="Nobel_win"><div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>nobel_prize_db</span>
+                    </span>
+                            <span class="text query_time" title="Tue Jun 02 2026 15:35:22 GMT+0530 (India Standard Time)">
+            Queried time
+                            : <span>15:35:22</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-type">year</span><span class="cm-punctuation">,</span> subject<span class="cm-punctuation">,</span> winner<span class="cm-punctuation">,</span> country
+<span class="cm-keyword">FROM</span> Nobel_win
+<span class="cm-keyword">WHERE</span> subject <span class="cm-operator">=</span> <span class="cm-string">'Chemistry'</span>
+<span class="cm-keyword">AND</span> <span class="cm-type">year</span> <span class="cm-keyword">BETWEEN</span> <span class="cm-number">1965</span> <span class="cm-keyword">AND</span> <span class="cm-number">1975</span><span class="cm-punctuation">;</span></div></div><div class="message collapsed binded select successed" msgid="214908095929" targetdb="nobel_prize_db" targettable="Nobel_win"><div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>nobel_prize_db</span>
+                    </span>
+                            <span class="text query_time" title="Tue Jun 02 2026 15:36:28 GMT+0530 (India Standard Time)">
+            Queried time
+                            : <span>15:36:28</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-type">year</span><span class="cm-punctuation">,</span> subject<span class="cm-punctuation">,</span> winner<span class="cm-punctuation">,</span> country
+<span class="cm-keyword">FROM</span> Nobel_win
+<span class="cm-keyword">WHERE</span> winner <span class="cm-keyword">LIKE</span> <span class="cm-string">'Louis%'</span><span class="cm-punctuation">;</span></div></div><div class="message collapsed binded select successed" msgid="716390282008" targetdb="nobel_prize_db" targettable="Nobel_win"><div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>nobel_prize_db</span>
+                    </span>
+                            <span class="text query_time" title="Tue Jun 02 2026 15:37:10 GMT+0530 (India Standard Time)">
+            Queried time
+                            : <span>15:37:10</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span>
+<span class="cm-keyword">FROM</span> Nobel_win
+<span class="cm-keyword">WHERE</span> subject <span class="cm-keyword">NOT</span> <span class="cm-keyword">LIKE</span> <span class="cm-string">'P%'</span>
+<span class="cm-keyword">ORDER</span> <span class="cm-keyword">BY</span> <span class="cm-type">year</span> <span class="cm-keyword">DESC</span><span class="cm-punctuation">,</span> winner <span class="cm-keyword">ASC</span><span class="cm-punctuation">;</span></div></div><div class="message collapsed binded select successed" msgid="397512132287" targetdb="nobel_prize_db" targettable="Nobel_win"><div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>nobel_prize_db</span>
+                    </span>
+                            <span class="text query_time" title="Tue Jun 02 2026 15:38:30 GMT+0530 (India Standard Time)">
+            Queried time
+                            : <span>15:38:30</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-type">year</span><span class="cm-punctuation">,</span> subject<span class="cm-punctuation">,</span> winner<span class="cm-punctuation">,</span> country<span class="cm-punctuation">,</span> category
+<span class="cm-keyword">FROM</span> Nobel_win
+<span class="cm-keyword">WHERE</span> <span class="cm-type">year</span> <span class="cm-operator">=</span> <span class="cm-number">1970</span>
+<span class="cm-keyword">ORDER</span> <span class="cm-keyword">BY</span>
+    CASE
+        WHEN subject <span class="cm-keyword">IN</span> <span class="cm-bracket">(</span><span class="cm-string">'Chemistry'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Economics'</span><span class="cm-bracket">)</span> THEN <span class="cm-number">1</span>
+        ELSE <span class="cm-number">0</span>
+    END<span class="cm-punctuation">,</span>
+    subject <span class="cm-keyword">ASC</span><span class="cm-punctuation">;</span></div></div></div><!-- console_message_container -->
+            <div class="query_input">
+                <span class="console_query_input"><div class="CodeMirror cm-s-pma CodeMirror-wrap" translate="no" style="clip-path: inset(0px);"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 16px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: -15px; border-right-width: 35px; min-height: 20px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 19.6875px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 35px; width: 1px; border-bottom: 0px solid transparent; top: 20px;"></div><div class="CodeMirror-gutters" style="height: 55px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div></div></div></div></span>
+            </div>
+        </div><!-- message end -->
+                <div class="mid_layer"></div>
+                <div class="card ungrouped" id="debug_console">
+            <div class="toolbar ">
+                    <div class="button order order_asc active">
+            
+            <span>ascending</span>
+        </div>
+                            <div class="button order order_desc">
+            
+            <span>descending</span>
+        </div>
+                            <div class="text">
+            
+            <span>Order:</span>
+        </div>
+                            <div class="switch_button">
+            
+            <span>Debug SQL</span>
+        </div>
+                            <div class="button order_by sort_count">
+            
+            <span>Count</span>
+        </div>
+                            <div class="button order_by sort_exec active">
+            
+            <span>Execution order</span>
+        </div>
+                            <div class="button order_by sort_time">
+            
+            <span>Time taken</span>
+        </div>
+                            <div class="text">
+            
+            <span>Order by:</span>
+        </div>
+                            <div class="button group_queries">
+            
+            <span>Group queries</span>
+        </div>
+                            <div class="button ungroup_queries">
+            
+            <span>Ungroup queries</span>
+        </div>
+            </div>
+            <div class="content debug" style="height: 98.248px;">
+                <div class="message welcome binded">Some error occurred while getting SQL debug info.</div>
+                <div class="debugLog"></div>
+            </div> <!-- Content -->
+            <div class="templates">
+                <div class="debug_query action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action dbg_show_trace">
+            Show trace
+                    </span>
+                            <span class="action dbg_hide_trace">
+            Hide trace
+                    </span>
+                            <span class="text count hide">
+            Count
+                            : <span></span>
+                    </span>
+                            <span class="text time">
+            Time taken
+                            : <span></span>
+                    </span>
+            </div>
+            </div> <!-- Template -->
+        </div> <!-- Debug SQL card -->
+                    <div class="card" id="pma_bookmarks">
+                <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Bookmarks</span>
+        </div>
+                            <div class="button refresh">
+            
+            <span>Refresh</span>
+        </div>
+                            <div class="button add">
+            
+            <span>Add</span>
+        </div>
+            </div>
+                <div class="content bookmark" style="height: 98.248px;">
+                    <div class="message welcome binded">
+    <span>No bookmarks</span>
+</div>
+
+                </div>
+                <div class="mid_layer"></div>
+                <div class="card add">
+                    <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Add bookmark</span>
+        </div>
+            </div>
+                    <div class="content add_bookmark" style="height: 101px;">
+                        <div class="options">
+                            <label>
+                                Label: <input type="text" name="label">
+                            </label>
+                            <label>
+                                Target database: <input type="text" name="targetdb">
+                            </label>
+                            <label>
+                                <input type="checkbox" name="shared">Share this bookmark                            </label>
+                            <button class="btn btn-primary" type="submit" name="submit">OK</button>
+                        </div> <!-- options -->
+                        <div class="query_input">
+                            <span class="bookmark_add_input"><div class="CodeMirror cm-s-pma CodeMirror-wrap" translate="no" style="clip-path: inset(0px);"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 16px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: -15px; border-right-width: 35px; min-height: 20px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 19.6875px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 35px; width: 1px; border-bottom: 0px solid transparent; top: 20px;"></div><div class="CodeMirror-gutters" style="height: 55px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div></div></div></div></span>
+                        </div>
+                    </div>
+                </div> <!-- Add bookmark card -->
+            </div> <!-- Bookmarks card -->
+                        <div class="card" id="pma_console_options">
+            <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Options</span>
+        </div>
+                            <div class="button default">
+            
+            <span>Set default</span>
+        </div>
+            </div>
+            <div class="content" style="height: 101px;">
+                <label>
+                    <input type="checkbox" name="always_expand">Always expand query messages                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="start_history">Show query history at start                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="current_query">Show current browsing query                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="enter_executes">
+                        Execute queries on Enter and insert new line with Shift+Enter. To make this permanent, view settings.                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="dark_theme">Switch to dark theme                </label>
+                <br>
+            </div>
+        </div> <!-- Options card -->
+        <div class="templates">
+                        <div class="query_actions">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span></span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span></span>
+                    </span>
+            </div>
+        </div>
+    </div> <!-- #console end -->
+</div> <!-- #console_container end -->
+
+
+  <div id="page_content"><div id="loading_parent"></div><a class="hide" id="update_recent_tables" href="http://localhost/phpmyadmin/index.php?route=/recent-table&amp;ajax_request=1&amp;recent_table=1"></a><div id="page_settings_modal"><div class="page_settings"><form method="post" action="http://localhost/phpmyadmin/index.php?route=%2Ftable%2Fsql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;server=1" class="config-form disableAjax">
+  <input type="hidden" name="tab_hash" value="">
+      <input type="hidden" name="check_page_refresh" id="check_page_refresh" value="">
+    <input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+  <input type="hidden" name="submit_save" value="Sql">
+
+  <ul class="nav nav-tabs" id="configFormDisplayTab" role="tablist">
+          <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="Sql_queries-tab" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#Sql_queries" data-bs-toggle="tab" role="tab" aria-controls="Sql_queries" aria-selected="true">SQL queries</a>
+      </li>
+          <li class="nav-item" role="presentation">
+        <a class="nav-link" id="Sql_box-tab" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#Sql_box" data-bs-toggle="tab" role="tab" aria-controls="Sql_box" aria-selected="false">SQL Query box</a>
+      </li>
+      </ul>
+  <div class="tab-content">
+          <div class="tab-pane fade show active" id="Sql_queries" role="tabpanel" aria-labelledby="Sql_queries-tab">
+        <div class="card border-top-0">
+          <div class="card-body">
+            <h5 class="card-title visually-hidden">SQL queries</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">SQL queries settings.</h6>
+            
+            <fieldset class="optbox">
+              <legend>SQL queries</legend>
+
+                            
+              <table class="table table-borderless">
+                <tbody><tr>
+  <th>
+    <label for="ShowSQL">Show SQL queries</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowSQL" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Defines whether SQL queries generated by phpMyAdmin should be displayed.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="ShowSQL" id="ShowSQL" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#ShowSQL" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="Confirm">Confirm DROP queries</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_Confirm" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Whether a warning ("Are your really sure…") should be displayed when you're about to lose data.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="Confirm" id="Confirm" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#Confirm" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="QueryHistoryMax">Query history length</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_QueryHistoryMax" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>How many queries are kept in history.</small>
+      </th>
+
+  <td>
+          <input type="number" name="QueryHistoryMax" id="QueryHistoryMax" value="25" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#QueryHistoryMax" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="IgnoreMultiSubmitErrors">Ignore multiple statement errors</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_IgnoreMultiSubmitErrors" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>If enabled, phpMyAdmin continues computing multiple-statement queries even if one of the queries failed.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="IgnoreMultiSubmitErrors" id="IgnoreMultiSubmitErrors">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#IgnoreMultiSubmitErrors" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="MaxCharactersInDisplayedSQL">Maximum displayed SQL length</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_MaxCharactersInDisplayedSQL" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Maximum number of characters used when a SQL query is displayed.</small>
+      </th>
+
+  <td>
+          <input type="number" name="MaxCharactersInDisplayedSQL" id="MaxCharactersInDisplayedSQL" value="1000" class="">
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#MaxCharactersInDisplayedSQL" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="RetainQueryBox">Retain query box</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_RetainQueryBox" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Defines whether the query box should stay on-screen after its submission.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="RetainQueryBox" id="RetainQueryBox">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#RetainQueryBox" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="CodemirrorEnable">Enable CodeMirror</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_CodemirrorEnable" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Use user-friendly editor for editing SQL queries (CodeMirror) with syntax highlighting and line numbers.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="CodemirrorEnable" id="CodemirrorEnable" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#CodemirrorEnable" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="LintEnable">Enable linter</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_LintEnable" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Find any errors in the query before executing it. Requires CodeMirror to be enabled.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="LintEnable" id="LintEnable" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#LintEnable" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="EnableAutocompleteForTablesAndColumns">Enable autocomplete for table and column names</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_EnableAutocompleteForTablesAndColumns" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Autocomplete of the table and column names in the SQL queries.</small>
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="EnableAutocompleteForTablesAndColumns" id="EnableAutocompleteForTablesAndColumns" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#EnableAutocompleteForTablesAndColumns" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="DefaultForeignKeyChecks">Foreign key checks</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultForeignKeyChecks" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+          <small>Default value for foreign key checks checkbox for some queries.</small>
+      </th>
+
+  <td>
+          <select name="DefaultForeignKeyChecks" id="DefaultForeignKeyChecks" class="w-75">
+                            <option value="default" selected="">Server default</option>
+                            <option value="enable">Enable</option>
+                            <option value="disable">Disable</option>
+              </select>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#DefaultForeignKeyChecks" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+
+              </tbody></table>
+            </fieldset>
+          </div>
+
+                  </div>
+      </div>
+          <div class="tab-pane fade" id="Sql_box" role="tabpanel" aria-labelledby="Sql_box-tab">
+        <div class="card border-top-0">
+          <div class="card-body">
+            <h5 class="card-title visually-hidden">SQL Query box</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Customise links shown in SQL Query boxes.</h6>
+            
+            <fieldset class="optbox">
+              <legend>SQL Query box</legend>
+
+                            
+              <table class="table table-borderless">
+                <tbody><tr>
+  <th>
+    <label for="SQLQuery-Edit">Edit</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_SQLQuery_Edit" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="SQLQuery-Edit" id="SQLQuery-Edit" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#SQLQuery-Edit" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="SQLQuery-Explain">Explain SQL</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_SQLQuery_Explain" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="SQLQuery-Explain" id="SQLQuery-Explain" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#SQLQuery-Explain" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="SQLQuery-ShowAsPHP">Create PHP code</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_SQLQuery_ShowAsPHP" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="SQLQuery-ShowAsPHP" id="SQLQuery-ShowAsPHP" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#SQLQuery-ShowAsPHP" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+<tr>
+  <th>
+    <label for="SQLQuery-Refresh">Refresh</label>
+
+          <span class="doc">
+        <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_SQLQuery_Refresh" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+      </span>
+    
+    
+      </th>
+
+  <td>
+          <span class="checkbox">
+        <input type="checkbox" name="SQLQuery-Refresh" id="SQLQuery-Refresh" checked="">
+      </span>
+    
+    
+    
+          <a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#SQLQuery-Refresh" title="Restore default value" style="display: inline-block; opacity: 0.25;"><img src="./Q.5_ANS_files/dot.gif" title="Restore default value" alt="Restore default value" class="icon ic_s_reload" style="display: none;"></a>
+    
+          </td>
+
+  </tr>
+
+              </tbody></table>
+            </fieldset>
+          </div>
+
+                  </div>
+      </div>
+      </div>
+</form>
+
+<script type="text/javascript">
+  if (typeof configInlineParams === 'undefined' || !Array.isArray(configInlineParams)) {
+    configInlineParams = [];
+  }
+  configInlineParams.push(function () {
+    registerFieldValidator('QueryHistoryMax', 'validatePositiveNumber', true);
+registerFieldValidator('QueryHistoryMax', 'validateUpperBound', true, ['25']);
+registerFieldValidator('MaxCharactersInDisplayedSQL', 'validatePositiveNumber', true);
+
+    $.extend(Messages, {
+      'error_nan_p': 'Not\u0020a\u0020positive\u0020number\u0021',
+      'error_nan_nneg': 'Not\u0020a\u0020non\u002Dnegative\u0020number\u0021',
+      'error_incorrect_port': 'Not\u0020a\u0020valid\u0020port\u0020number\u0021',
+      'error_invalid_value': 'Incorrect\u0020value\u0021',
+      'error_value_lte': 'Value\u0020must\u0020be\u0020less\u0020than\u0020or\u0020equal\u0020to\u0020\u0025s\u0021',
+    });
+
+    $.extend(defaultValues, {
+      'ShowSQL': true,
+      'Confirm': true,
+      'QueryHistoryMax': '25',
+      'IgnoreMultiSubmitErrors': false,
+      'MaxCharactersInDisplayedSQL': '1000',
+      'RetainQueryBox': false,
+      'CodemirrorEnable': true,
+      'LintEnable': true,
+      'EnableAutocompleteForTablesAndColumns': true,
+      'DefaultForeignKeyChecks': ['default'],
+      'SQLQuery-Edit': true,
+      'SQLQuery-Explain': true,
+      'SQLQuery-ShowAsPHP': true,
+      'SQLQuery-Refresh': true
+    });
+  });
+  if (typeof configScriptLoaded !== 'undefined' && configInlineParams) {
+    loadInlineConfig();
+  }
+</script>
+</div></div><form method="post" action="http://localhost/phpmyadmin/index.php?route=/import" class="ajax lock-page" id="sqlqueryform" name="sqlform" enctype="multipart/form-data">
+  <input type="hidden" name="db" value="nobel_prize_db" style="display: inline-block;"><input type="hidden" name="table" value="Nobel_win" style="display: inline-block;"><input type="hidden" name="token" value="727c755d247366333c52723464624b57" style="display: inline-block;">
+  <input type="hidden" name="is_js_confirmed" value="0" style="display: inline-block;">
+  <input type="hidden" name="pos" value="0" style="display: inline-block;">
+  <input type="hidden" name="goto" value="index.php?route=/table/sql" style="display: inline-block;">
+  <input type="hidden" name="message_to_show" value="Your SQL query has been executed successfully." style="display: inline-block;">
+  <input type="hidden" name="prev_sql_query" value="SELECT * FROM `Nobel_win` WHERE 1" style="display: inline-block;">
+
+      <a id="querybox" style="display: none;"></a>
+
+    <div class="card mb-3" style="display: none;">
+      <div class="card-header">Run SQL query/queries on table <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win">nobel_prize_db.Nobel_win</a>: <a href="http://localhost/phpmyadmin/url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F8.0%2Fen%2Fselect.html" target="mysql_doc"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a></div>
+      <div class="card-body">
+        <div id="queryfieldscontainer">
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <textarea class="form-control" tabindex="100" name="sql_query" id="sqlquery" cols="40" rows="15" data-textarea-auto-select="false" aria-label="SQL query" style="display: none;">SELECT * FROM `Nobel_win` WHERE 1</textarea><div class="CodeMirror cm-s-default CodeMirror-wrap ui-resizable" translate="no" style="clip-path: inset(0px); resize: vertical;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 161.5px; left: 165.438px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="100" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 46px; margin-bottom: -15px; border-right-width: 35px; min-height: 185px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like">x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 119.438px; top: 157.5px; height: 19.6875px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">SELECT</span> <span class="cm-type">year</span><span class="cm-punctuation">,</span> subject<span class="cm-punctuation">,</span> winner<span class="cm-punctuation">,</span> country<span class="cm-punctuation">,</span> category</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">FROM</span> Nobel_win</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">WHERE</span> <span class="cm-type">year</span> <span class="cm-operator">=</span> <span class="cm-number">1970</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">ORDER</span> <span class="cm-keyword">BY</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">CASE</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">WHEN</span> subject <span class="cm-keyword">IN</span> <span class="cm-bracket">(</span><span class="cm-string">'Chemistry'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Economics'</span><span class="cm-bracket">)</span> <span class="cm-keyword">THEN</span> <span class="cm-number">1</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">ELSE</span> <span class="cm-number">0</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">END</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  subject <span class="cm-keyword">ASC</span><span class="cm-punctuation">;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 35px; width: 1px; border-bottom: 0px solid transparent; top: 185px;"></div><div class="CodeMirror-gutters" style="height: 220px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div></div>
+              </div>
+              <div id="querymessage"></div>
+
+              <div class="btn-toolbar" role="toolbar">
+                                  <div class="btn-group me-2" role="group">
+                    <input type="button" value="SELECT *" id="selectall" class="btn btn-secondary button sqlbutton">
+                    <input type="button" value="SELECT" id="select" class="btn btn-secondary button sqlbutton">
+                    <input type="button" value="INSERT" id="insert" class="btn btn-secondary button sqlbutton">
+                    <input type="button" value="UPDATE" id="update" class="btn btn-secondary button sqlbutton">
+                    <input type="button" value="DELETE" id="delete" class="btn btn-secondary button sqlbutton">
+                  </div>
+                
+                <div class="btn-group me-2" role="group">
+                  <input type="button" value="Clear" id="clear" class="btn btn-secondary button sqlbutton">
+                                      <input type="button" value="Format" id="format" class="btn btn-secondary button sqlbutton">
+                                  </div>
+
+                <input type="button" value="Get auto-saved query" id="saved" class="btn btn-secondary button sqlbutton">
+              </div>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="parameterized" id="parameterized">
+                  <label class="form-check-label" for="parameterized">
+                    Bind parameters                    <a href="http://localhost/phpmyadmin/doc/html/faq.html#faq6-40" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3" id="parametersDiv"></div>
+            </div>
+
+                          <div class="col-xl-2 col-lg-3">
+                <div class="mb-3">
+                  <label class="visually-hidden" for="fieldsSelect">Columns</label>
+                  <select class="form-select resize-vertical" id="fieldsSelect" name="dummy" size="15" ondblclick="Functions.insertValueQuery()" multiple="">
+                                          <option value="`year`" title="&quot;&quot;">
+                        year
+                      </option>
+                                          <option value="`subject`" title="&quot;&quot;">
+                        subject
+                      </option>
+                                          <option value="`winner`" title="&quot;&quot;">
+                        winner
+                      </option>
+                                          <option value="`country`" title="&quot;&quot;">
+                        country
+                      </option>
+                                          <option value="`category`" title="&quot;&quot;">
+                        category
+                      </option>
+                                      </select>
+                </div>
+
+                <input type="button" class="btn btn-secondary button" id="insertBtn" name="insert" value="&lt;&lt;" title="Insert">
+              </div>
+                      </div>
+        </div>
+
+                  <div class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col-6">
+              <label class="form-label" for="bkm_label">Bookmark this SQL query:</label>
+            </div>
+            <div class="col-6">
+              <input class="form-control" type="text" name="bkm_label" id="bkm_label" tabindex="110" value="">
+            </div>
+
+            <div class="col-12">
+              <div class="form-check form-check-inline" style="display: none;">
+                <input class="form-check-input" type="checkbox" name="bkm_all_users" tabindex="111" id="id_bkm_all_users" value="true">
+                <label class="form-check-label" for="id_bkm_all_users">Let every user access this bookmark</label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-check form-check-inline" style="display: none;">
+                <input class="form-check-input" type="checkbox" name="bkm_replace" tabindex="112" id="id_bkm_replace" value="true">
+                <label class="form-check-label" for="id_bkm_replace">Replace existing bookmark of same name</label>
+              </div>
+            </div>
+          </div>
+              </div>
+      <div class="card-footer">
+        <div class="row row-cols-lg-auto g-3 align-items-center">
+          <div class="col-12">
+            <div class="input-group me-2">
+              <span class="input-group-text">Delimiter</span>
+              <label class="visually-hidden" for="id_sql_delimiter">Delimiter</label>
+              <input class="form-control" type="text" name="sql_delimiter" tabindex="131" size="3" value=";" id="id_sql_delimiter">
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="show_query" value="1" id="checkbox_show_query" tabindex="132">
+              <label class="form-check-label" for="checkbox_show_query">Show this query here again</label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="retain_query_box" value="1" id="retain_query_box" tabindex="133">
+              <label class="form-check-label" for="retain_query_box">Retain query box</label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="rollback_query" value="1" id="rollback_query" tabindex="134">
+              <label class="form-check-label" for="rollback_query">Rollback when finished</label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input type="hidden" name="fk_checks" value="0">
+              <input class="form-check-input" type="checkbox" name="fk_checks" id="fk_checks" value="1" checked="">
+              <label class="form-check-label" for="fk_checks">Enable foreign key checks</label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <input class="btn btn-primary ms-1" type="submit" id="button_submit_query" name="SQL" tabindex="200" value="Go">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  <br id="togglequerybox_spacer"><button class="btn btn-secondary" id="togglequerybox" style="">Show query box</button><input type="hidden" name="SQL" value="Go" style="display: inline-block;"><input type="hidden" id="ajax_request_hidden" name="ajax_request" value="true" style="display: inline-block;"></form>
+
+<div id="sqlqueryresultsouter"><a class="hide" id="update_recent_tables" href="http://localhost/phpmyadmin/index.php?route=/recent-table&amp;ajax_request=1&amp;recent_table=1"></a><div class="sqlqueryresults ajax">
+    
+    
+    <div class="alert alert-primary" role="alert">
+  <img src="./Q.5_ANS_files/dot.gif" title="" alt="" class="icon ic_s_notice"> Current selection does not contain a unique column. Grid edit, checkbox, Edit, Copy and Delete features are not available. <a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_RowActionLinksWithoutUnique" target="documentation"><img src="./Q.5_ANS_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+</div>
+
+    
+    
+<div class="result_query">
+<div class="alert alert-success" role="alert">
+  <img src="./Q.5_ANS_files/dot.gif" title="" alt="" class="icon ic_s_success"> Showing rows 0 -  3 (4 total, Query took 0.0004 seconds.) [subject: <strong>LITERATURE... - ECONOMICS...</strong>]
+</div>
+<div class="sqlOuter"><code class="sql"><pre style="display: none;">SELECT year, subject, winner, country, category
+FROM Nobel_win
+WHERE year = 1970
+ORDER BY
+    CASE
+        WHEN subject IN ('Chemistry', 'Economics') THEN 1
+        ELSE 0
+    END,
+    subject ASC;
+</pre><div class="sql-highlight cm-s-default"><span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="http://localhost/phpmyadmin/url.php?url=https://dev.mysql.com/doc/refman/8.0/en/select.html">SELECT</a></span> <span class="cm-type">year</span><span class="cm-punctuation">,</span> subject<span class="cm-punctuation">,</span> winner<span class="cm-punctuation">,</span> country<span class="cm-punctuation">,</span> category
+<span class="cm-keyword">FROM</span> Nobel_win
+<span class="cm-keyword">WHERE</span> <span class="cm-type">year</span> <span class="cm-operator">=</span> <span class="cm-number">1970</span>
+<span class="cm-keyword">ORDER</span> <span class="cm-keyword">BY</span>
+    <span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="http://localhost/phpmyadmin/url.php?url=https://dev.mysql.com/doc/refman/8.0/en/control-flow-functions.html%23operator_case">CASE</a></span>
+        <span class="cm-keyword">WHEN</span> subject <span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="http://localhost/phpmyadmin/url.php?url=https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html%23function_in">IN</a></span> <span class="cm-bracket">(</span><span class="cm-string">'Chemistry'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Economics'</span><span class="cm-bracket">)</span> <span class="cm-keyword">THEN</span> <span class="cm-number">1</span>
+        <span class="cm-keyword">ELSE</span> <span class="cm-number">0</span>
+    <span class="cm-keyword">END</span><span class="cm-punctuation">,</span>
+    subject <span class="cm-keyword">ASC</span><span class="cm-punctuation">;</span>
+</div></code></div><div class="tools d-print-none"><form action="http://localhost/phpmyadmin/index.php?route=/sql" method="post"><input type="hidden" name="db" value="nobel_prize_db"><input type="hidden" name="table" value="Nobel_win"><input type="hidden" name="token" value="727c755d247366333c52723464624b57"><input type="hidden" name="sql_query" value="SELECT year, subject, winner, country, category
+FROM Nobel_win
+WHERE year = 1970
+ORDER BY
+    CASE
+        WHEN subject IN (&#39;Chemistry&#39;, &#39;Economics&#39;) THEN 1
+        ELSE 0
+    END,
+    subject ASC;"><input type="hidden" name="profiling_form" value="1"><input type="checkbox" name="profiling" id="profilingCheckbox" class="autosubmit"> <label for="profilingCheckbox">Profiling</label></form> [&nbsp;<a href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#" class="inline_edit_sql">Edit inline</a>&nbsp;] [&nbsp;<a href="http://localhost/phpmyadmin/index.php" data-post="route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B&amp;show_query=1">Edit</a>&nbsp;] [&nbsp;<a href="http://localhost/phpmyadmin/index.php" data-post="route=/import&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=EXPLAIN+SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B">Explain SQL</a>&nbsp;] [&nbsp;<a href="http://localhost/phpmyadmin/index.php" data-post="route=/import&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B&amp;show_query=1&amp;show_as_php=1">Create PHP code</a>&nbsp;] [&nbsp;<a href="http://localhost/phpmyadmin/index.php" data-post="route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B&amp;show_query=1&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B&amp;show_query=1">Refresh</a>&nbsp;]</div></div>
+
+      <table class="navigation d-print-none">
+      <tbody><tr>
+        <td class="navigation_separator"></td>
+
+        
+        
+        
+
+        
+                  <td>
+            <form action="http://localhost/phpmyadmin/index.php?route=/sql" method="post">
+              <input type="hidden" name="db" value="nobel_prize_db"><input type="hidden" name="table" value="Nobel_win"><input type="hidden" name="server" value="1"><input type="hidden" name="sql_query" value="SELECT year, subject, winner, country, category
+FROM Nobel_win
+WHERE year = 1970
+ORDER BY
+    CASE
+        WHEN subject IN (&#39;Chemistry&#39;, &#39;Economics&#39;) THEN 1
+        ELSE 0
+    END,
+    subject ASC;"><input type="hidden" name="is_browse_distinct" value=""><input type="hidden" name="goto" value="index.php?route=/table/structure"><input type="hidden" name="session_max_rows" value="all"><input type="hidden" name="pos" value="0"><input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+              <input type="checkbox" name="navig" id="showAll_2080545690" class="showAllRows" value="all">
+              <label for="showAll_2080545690">Show all</label>
+            </form>
+          </td>
+          <td><div class="navigation_separator">|</div></td>
+        
+        <td>
+          <div class="save_edited hide">
+            <input class="btn btn-link" type="submit" value="Save edited data">
+            <div class="navigation_separator">|</div>
+          </div>
+        </td>
+        <td>
+          <div class="restore_column hide" style="display: none;">
+            <input class="btn btn-link" type="submit" value="Restore column order">
+            <div class="navigation_separator">|</div>
+          </div>
+        </td>
+        <td class="navigation_goto">
+          <form action="http://localhost/phpmyadmin/index.php?route=/sql" method="post" class="maxRowsForm">
+            <input type="hidden" name="db" value="nobel_prize_db"><input type="hidden" name="table" value="Nobel_win"><input type="hidden" name="server" value="1"><input type="hidden" name="sql_query" value="SELECT year, subject, winner, country, category
+FROM Nobel_win
+WHERE year = 1970
+ORDER BY
+    CASE
+        WHEN subject IN (&#39;Chemistry&#39;, &#39;Economics&#39;) THEN 1
+        ELSE 0
+    END,
+    subject ASC;"><input type="hidden" name="is_browse_distinct" value=""><input type="hidden" name="goto" value="index.php?route=/table/structure"><input type="hidden" name="pos" value="0"><input type="hidden" name="unlim_num_rows" value="4"><input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+
+            <label for="sessionMaxRowsSelect">Number of rows:</label>
+            <select class="autosubmit" name="session_max_rows" id="sessionMaxRowsSelect">
+                                            <option value="25" selected="">25</option>
+                              <option value="50">50</option>
+                              <option value="100">100</option>
+                              <option value="250">250</option>
+                              <option value="500">500</option>
+                          </select>
+          </form>
+        </td>
+        <td class="navigation_separator"></td>
+        <td class="largescreenonly">
+          <span>Filter rows:</span>
+          <input type="text" class="filter_rows" placeholder="Search this table" data-for="2080545690">
+        </td>
+        <td class="largescreenonly">
+                  </td>
+        <td class="navigation_separator"></td>
+      </tr>
+    </tbody></table>
+  
+
+<input class="save_cells_at_once" type="hidden" value="">
+<div class="common_hidden_inputs">
+  <input type="hidden" name="db" value="nobel_prize_db"><input type="hidden" name="table" value="Nobel_win"><input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+</div>
+
+          <input class="table_create_time" type="hidden" value="">
+  
+  <form method="post" action="http://localhost/phpmyadmin/index.php?route=/sql" name="displayOptionsForm" class="ajax d-print-none">
+    <input type="hidden" name="db" value="nobel_prize_db"><input type="hidden" name="table" value="Nobel_win"><input type="hidden" name="sql_query" value="SELECT year, subject, winner, country, category
+FROM Nobel_win
+WHERE year = 1970
+ORDER BY
+    CASE
+        WHEN subject IN (&#39;Chemistry&#39;, &#39;Economics&#39;) THEN 1
+        ELSE 0
+    END,
+    subject ASC;"><input type="hidden" name="goto" value="index.php?route=/table/structure"><input type="hidden" name="display_options_form" value="1"><input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+
+        <div class="mb-3">
+      <button class="btn btn-sm btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#extraOptions" aria-expanded="false" aria-controls="extraOptions">
+        Extra options      </button>
+    </div>
+    <div class="collapse mb-3" id="extraOptions">
+    
+      <fieldset class="pma-fieldset">
+        <div class="formelement">
+          <div>
+            <input type="radio" name="pftext" id="partialFulltextRadioP2080545690" value="P" checked="">
+            <label for="partialFulltextRadioP2080545690">Partial texts</label>
+          </div>
+          <div>
+            <input type="radio" name="pftext" id="partialFulltextRadioF2080545690" value="F">
+            <label for="partialFulltextRadioF2080545690">Full texts</label>
+          </div>
+        </div>
+
+                  <div class="formelement">
+            <div>
+              <input type="radio" name="relational_display" id="relationalDisplayRadioK2080545690" value="K" checked="">
+              <label for="relationalDisplayRadioK2080545690">Relational key</label>
+            </div>
+            <div>
+              <input type="radio" name="relational_display" id="relationalDisplayRadioD2080545690" value="D">
+              <label for="relationalDisplayRadioD2080545690">Display column for relationships</label>
+            </div>
+          </div>
+        
+        <div class="formelement">
+          <input type="checkbox" name="display_binary" id="display_binary_2080545690" checked="">
+          <label for="display_binary_2080545690">Show binary contents</label>
+
+          <input type="checkbox" name="display_blob" id="display_blob_2080545690">
+          <label for="display_blob_2080545690">Show BLOB contents</label>
+        </div>
+
+                <div class="formelement">
+          <input type="checkbox" name="hide_transformation" id="hide_transformation_2080545690">
+          <label for="hide_transformation_2080545690">Hide browser transformation</label>
+        </div>
+
+        <div class="formelement">
+                    <div>
+            <input type="radio" name="geoOption" id="geoOptionRadioWkt2080545690" value="WKT" checked="">
+            <label for="geoOptionRadioWkt2080545690">Well Known Text</label>
+          </div>
+          <div>
+            <input type="radio" name="geoOption" id="geoOptionRadioWkb2080545690" value="WKB">
+            <label for="geoOptionRadioWkb2080545690">Well Known Binary</label>
+          </div>
+        </div>
+        <div class="clearfloat"></div>
+      </fieldset>
+
+      <fieldset class="pma-fieldset tblFooters">
+        <input class="btn btn-primary" type="submit" value="Go">
+      </fieldset>
+        </div>
+      </form>
+
+
+  <div class="table-responsive-md">
+    <div style="position: relative;" class="data"><div class="cRsz" style="height: 112.406px;"><div class="colborder" style="left: 45.8438px;"></div><div class="colborder" style="left: 144.234px;"></div><div class="colborder" style="left: 288.468px;"></div><div class="colborder" style="left: 355.438px;"></div><div class="colborder" style="left: 428.984px;"></div></div><table class="table table-striped table-hover table-sm table_results ajax w-auto pma_table" data-uniqueid="2080545690">
+
+      <thead><tr>
+
+        <th class="draggable position-sticky text-end column_heading marker pointer" data-column="year"><span>
+          <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+%60Nobel_win%60.%60year%60+ASC&amp;sql_signature=a655e90e01357fdd00b5dcf57937357b354898ce79baa6798ce8b98b8c167f35&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">year<input type="hidden" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC%2C+%60Nobel_win%60.%60year%60+ASC&amp;sql_signature=307acb056b375e8d51a0e32ce73f18ebcd8d220023380006d2178a622d88a590&amp;session_max_rows=25&amp;is_browse_distinct=0"></a><input type="hidden" name="url-remove-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category+FROM+Nobel_win+WHERE+year+%3D+1970+ORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC&amp;sql_signature=617663d2fd23ac05f02bc10c65361aca01dd59245bb5f14c8dbf0307df1ff13c&amp;session_max_rows=25&amp;is_browse_distinct=0">
+<input type="hidden" name="url-add-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC%2C+%60Nobel_win%60.%60year%60+ASC&amp;sql_signature=307acb056b375e8d51a0e32ce73f18ebcd8d220023380006d2178a622d88a590&amp;session_max_rows=25&amp;is_browse_distinct=0">
+        
+  </span></th>
+  <th class="draggable position-sticky column_heading marker pointer" data-column="subject"><span>
+          <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+%60Nobel_win%60.%60subject%60+DESC&amp;sql_signature=543e0f0f531b04b4ce217ef6c97be6d6e352ce4b783f4d56e59764282c7c22f8&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">subject <img src="./Q.5_ANS_files/dot.gif" title="" alt="Ascending" class="icon ic_s_asc soimg"> <img src="./Q.5_ANS_files/dot.gif" title="" alt="Descending" class="icon ic_s_desc soimg hide"> <small>2</small><input type="hidden" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+DESC&amp;sql_signature=83e8d8f7f8c8613e906746e36f293c25bb052bd877a726436c8ffd3ca9782e32&amp;session_max_rows=25&amp;is_browse_distinct=0"></a><input type="hidden" name="url-remove-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category+FROM+Nobel_win+WHERE+year+%3D+1970+ORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC&amp;sql_signature=a0f510146bb0758d7da6423ef900d4f230a81857e736358afbb1d3790d227d84&amp;session_max_rows=25&amp;is_browse_distinct=0">
+<input type="hidden" name="url-add-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+DESC&amp;sql_signature=83e8d8f7f8c8613e906746e36f293c25bb052bd877a726436c8ffd3ca9782e32&amp;session_max_rows=25&amp;is_browse_distinct=0">
+        
+  </span></th>
+  <th class="draggable position-sticky column_heading marker pointer" data-column="winner"><span>
+          <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+%60Nobel_win%60.%60winner%60+ASC&amp;sql_signature=621d2d1e671b06ce03f9f75fd0663d17214595154914bf8ceee242f586fc48c9&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">winner<input type="hidden" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC%2C+%60Nobel_win%60.%60winner%60+ASC&amp;sql_signature=0ae8eba6b05c1445c76be07e5a5287fd1288c5bae8448073b3e9c8d1f3c1c697&amp;session_max_rows=25&amp;is_browse_distinct=0"></a><input type="hidden" name="url-remove-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category+FROM+Nobel_win+WHERE+year+%3D+1970+ORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC&amp;sql_signature=617663d2fd23ac05f02bc10c65361aca01dd59245bb5f14c8dbf0307df1ff13c&amp;session_max_rows=25&amp;is_browse_distinct=0">
+<input type="hidden" name="url-add-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC%2C+%60Nobel_win%60.%60winner%60+ASC&amp;sql_signature=0ae8eba6b05c1445c76be07e5a5287fd1288c5bae8448073b3e9c8d1f3c1c697&amp;session_max_rows=25&amp;is_browse_distinct=0">
+        
+  </span></th>
+  <th class="draggable position-sticky column_heading marker pointer" data-column="country"><span>
+          <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+%60Nobel_win%60.%60country%60+ASC&amp;sql_signature=2c1a05a9e890e368c0c259e27f62438f5472de0c70a78e7d3be60276437c861c&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">country<input type="hidden" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC%2C+%60Nobel_win%60.%60country%60+ASC&amp;sql_signature=1ad874d3eff82920ae6d1574effd5f029246c81673c5751b9d1f39aeb5eb6e5c&amp;session_max_rows=25&amp;is_browse_distinct=0"></a><input type="hidden" name="url-remove-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category+FROM+Nobel_win+WHERE+year+%3D+1970+ORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC&amp;sql_signature=617663d2fd23ac05f02bc10c65361aca01dd59245bb5f14c8dbf0307df1ff13c&amp;session_max_rows=25&amp;is_browse_distinct=0">
+<input type="hidden" name="url-add-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC%2C+%60Nobel_win%60.%60country%60+ASC&amp;sql_signature=1ad874d3eff82920ae6d1574effd5f029246c81673c5751b9d1f39aeb5eb6e5c&amp;session_max_rows=25&amp;is_browse_distinct=0">
+        
+  </span></th>
+  <th class="draggable position-sticky column_heading marker pointer" data-column="category"><span>
+          <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+%60Nobel_win%60.%60category%60+ASC&amp;sql_signature=351261b04499b17ffe0eb5e4659b51afce5c36efb8eee1ea6c23447f2989de93&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">category<input type="hidden" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC%2C+%60Nobel_win%60.%60category%60+ASC&amp;sql_signature=ed1ceb4a7abfc0daef85294752b4bb550220128c0759944c6d11fa983ebf606f&amp;session_max_rows=25&amp;is_browse_distinct=0"></a><input type="hidden" name="url-remove-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category+FROM+Nobel_win+WHERE+year+%3D+1970+ORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC&amp;sql_signature=617663d2fd23ac05f02bc10c65361aca01dd59245bb5f14c8dbf0307df1ff13c&amp;session_max_rows=25&amp;is_browse_distinct=0">
+<input type="hidden" name="url-add-order" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970++%0AORDER+BY+CASE+WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1+ELSE+0+END+ASC%2C+%60Nobel_win%60.%60subject%60+ASC%2C+%60Nobel_win%60.%60category%60+ASC&amp;sql_signature=ed1ceb4a7abfc0daef85294752b4bb550220128c0759944c6d11fa983ebf606f&amp;session_max_rows=25&amp;is_browse_distinct=0">
+        
+  </span></th>
+
+      
+<td class="d-print-none"><span></span></td>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr><td data-decimals="0" data-type="int" class="text-end data text-nowrap condition"><span>1970</span></td>
+<td data-decimals="0" data-type="string" data-originallength="10" class="data text pre_wrap"><span>Literature</span></td>
+<td data-decimals="0" data-type="string" data-originallength="22" class="data text pre_wrap"><span>Aleksandr Solzhenitsyn</span></td>
+<td data-decimals="0" data-type="string" data-originallength="6" class="data text pre_wrap"><span>Russia</span></td>
+<td data-decimals="0" data-type="string" data-originallength="6" class="data text pre_wrap"><span>Writer</span></td>
+</tr>
+<tr><td data-decimals="0" data-type="int" class="text-end data text-nowrap condition"><span>1970</span></td>
+<td data-decimals="0" data-type="string" data-originallength="7" class="data text pre_wrap"><span>Physics</span></td>
+<td data-decimals="0" data-type="string" data-originallength="13" class="data text pre_wrap"><span>Hannes Alfven</span></td>
+<td data-decimals="0" data-type="string" data-originallength="6" class="data text pre_wrap"><span>Sweden</span></td>
+<td data-decimals="0" data-type="string" data-originallength="9" class="data text pre_wrap"><span>Scientist</span></td>
+</tr>
+<tr><td data-decimals="0" data-type="int" class="text-end data text-nowrap condition"><span>1970</span></td>
+<td data-decimals="0" data-type="string" data-originallength="9" class="data text pre_wrap"><span>Chemistry</span></td>
+<td data-decimals="0" data-type="string" data-originallength="20" class="data text pre_wrap"><span>Luis Federico Leloir</span></td>
+<td data-decimals="0" data-type="string" data-originallength="9" class="data text pre_wrap"><span>Argentina</span></td>
+<td data-decimals="0" data-type="string" data-originallength="9" class="data text pre_wrap"><span>Scientist</span></td>
+</tr>
+<tr><td data-decimals="0" data-type="int" class="text-end data text-nowrap condition"><span>1970</span></td>
+<td data-decimals="0" data-type="string" data-originallength="9" class="data text pre_wrap"><span>Economics</span></td>
+<td data-decimals="0" data-type="string" data-originallength="14" class="data text pre_wrap"><span>Paul Samuelson</span></td>
+<td data-decimals="0" data-type="string" data-originallength="3" class="data text pre_wrap"><span>USA</span></td>
+<td data-decimals="0" data-type="string" data-originallength="9" class="data text pre_wrap"><span>Economist</span></td>
+</tr>
+
+      </tbody>
+    </table><div class="cPointer" style="visibility: hidden;"></div><div class="cCpy" style="display: none;"></div><div class="cEdit" style="display: none;"><input class="edit_box" rows="1"><div class="edit_area"></div></div><div class="cEdit" style="display: none;"><textarea class="edit_box" rows="1"></textarea><div class="edit_area"></div></div></div>
+  </div>
+
+
+      <table class="navigation d-print-none">
+      <tbody><tr>
+        <td class="navigation_separator"></td>
+
+        
+        
+        
+
+        
+                  <td>
+            <form action="http://localhost/phpmyadmin/index.php?route=/sql" method="post">
+              <input type="hidden" name="db" value="nobel_prize_db"><input type="hidden" name="table" value="Nobel_win"><input type="hidden" name="server" value="1"><input type="hidden" name="sql_query" value="SELECT year, subject, winner, country, category
+FROM Nobel_win
+WHERE year = 1970
+ORDER BY
+    CASE
+        WHEN subject IN (&#39;Chemistry&#39;, &#39;Economics&#39;) THEN 1
+        ELSE 0
+    END,
+    subject ASC;"><input type="hidden" name="is_browse_distinct" value=""><input type="hidden" name="goto" value="index.php?route=/table/structure"><input type="hidden" name="session_max_rows" value="all"><input type="hidden" name="pos" value="0"><input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+              <input type="checkbox" name="navig" id="showAll_2080545690" class="showAllRows" value="all">
+              <label for="showAll_2080545690">Show all</label>
+            </form>
+          </td>
+          <td><div class="navigation_separator">|</div></td>
+        
+        <td>
+          <div class="save_edited hide">
+            <input class="btn btn-link" type="submit" value="Save edited data">
+            <div class="navigation_separator">|</div>
+          </div>
+        </td>
+        <td>
+          <div class="restore_column hide" style="display: none;">
+            <input class="btn btn-link" type="submit" value="Restore column order">
+            <div class="navigation_separator">|</div>
+          </div>
+        </td>
+        <td class="navigation_goto">
+          <form action="http://localhost/phpmyadmin/index.php?route=/sql" method="post" class="maxRowsForm">
+            <input type="hidden" name="db" value="nobel_prize_db"><input type="hidden" name="table" value="Nobel_win"><input type="hidden" name="server" value="1"><input type="hidden" name="sql_query" value="SELECT year, subject, winner, country, category
+FROM Nobel_win
+WHERE year = 1970
+ORDER BY
+    CASE
+        WHEN subject IN (&#39;Chemistry&#39;, &#39;Economics&#39;) THEN 1
+        ELSE 0
+    END,
+    subject ASC;"><input type="hidden" name="is_browse_distinct" value=""><input type="hidden" name="goto" value="index.php?route=/table/structure"><input type="hidden" name="pos" value="0"><input type="hidden" name="unlim_num_rows" value="4"><input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+
+            <label for="sessionMaxRowsSelect">Number of rows:</label>
+            <select class="autosubmit" name="session_max_rows" id="sessionMaxRowsSelect">
+                                            <option value="25" selected="">25</option>
+                              <option value="50">50</option>
+                              <option value="100">100</option>
+                              <option value="250">250</option>
+                              <option value="500">500</option>
+                          </select>
+          </form>
+        </td>
+        <td class="navigation_separator"></td>
+        <td class="largescreenonly">
+          <span>Filter rows:</span>
+          <input type="text" class="filter_rows" placeholder="Search this table" data-for="2080545690">
+        </td>
+        <td class="largescreenonly">
+                  </td>
+        <td class="navigation_separator"></td>
+      </tr>
+    </tbody></table>
+  
+
+  <fieldset class="pma-fieldset d-print-none">
+    <legend>Query results operations</legend>
+
+          <button type="button" class="btn btn-link jsPrintButton"><span class="text-nowrap"><img src="./Q.5_ANS_files/dot.gif" title="Print" alt="Print" class="icon ic_b_print">&nbsp;Print</span></button>
+
+      <a href="http://localhost/phpmyadmin/index.php?route=/table/sql&amp;db=nobel_prize_db&amp;table=Nobel_win#" id="copyToClipBoard" class="btn"><span class="text-nowrap"><img src="./Q.5_ANS_files/dot.gif" title="Copy to clipboard" alt="Copy to clipboard" class="icon ic_b_insrow">&nbsp;Copy to clipboard</span></a>
+    
+                  <a href="http://localhost/phpmyadmin/index.php" data-post="route=/table/export&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;printview=1&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B&amp;single_table=true&amp;unlim_num_rows=4" class="btn"><span class="text-nowrap"><img src="./Q.5_ANS_files/dot.gif" title="Export" alt="Export" class="icon ic_b_tblexport">&nbsp;Export</span></a>
+
+        <a href="http://localhost/phpmyadmin/index.php" data-post="route=/table/chart&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;printview=1&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B&amp;single_table=true&amp;unlim_num_rows=4" class="btn"><span class="text-nowrap"><img src="./Q.5_ANS_files/dot.gif" title="Display chart" alt="Display chart" class="icon ic_b_chart">&nbsp;Display chart</span></a>
+
+              
+      <span>
+        <a href="http://localhost/phpmyadmin/index.php?route=/view/create" data-post="route=/view/create&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B&amp;printview=1" class="btn create_view ajax"><span class="text-nowrap"><img src="./Q.5_ANS_files/dot.gif" title="Create view" alt="Create view" class="icon ic_b_view_add">&nbsp;Create view</span></a>
+      </span>
+      </fieldset>
+<div class="modal fade" id="createViewModal" tabindex="-1" aria-labelledby="createViewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" id="createViewModalDialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createViewModalLabel">Create view</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="createViewModalGoButton">Go</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <form action="http://localhost/phpmyadmin/index.php?route=/sql" method="post" class="bookmarkQueryForm d-print-none" onsubmit="return ! Functions.emptyCheckTheField(this, &#39;bkm_fields[bkm_label]&#39;);">
+    <input type="hidden" name="token" value="727c755d247366333c52723464624b57">
+    <input type="hidden" name="db" value="nobel_prize_db">
+    <input type="hidden" name="goto" value="index.php?route=/sql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;sql_query=SELECT+year%2C+subject%2C+winner%2C+country%2C+category%0D%0AFROM+Nobel_win%0D%0AWHERE+year+%3D+1970%0D%0AORDER+BY%0D%0A++++CASE%0D%0A++++++++WHEN+subject+IN+%28%27Chemistry%27%2C+%27Economics%27%29+THEN+1%0D%0A++++++++ELSE+0%0D%0A++++END%2C%0D%0A++++subject+ASC%3B&amp;id_bookmark=1">
+    <input type="hidden" name="bkm_fields[bkm_database]" value="nobel_prize_db">
+    <input type="hidden" name="bkm_fields[bkm_user]" value="root">
+    <input type="hidden" name="bkm_fields[bkm_sql_query]" value="SELECT year, subject, winner, country, category
+FROM Nobel_win
+WHERE year = 1970
+ORDER BY
+    CASE
+        WHEN subject IN (&#39;Chemistry&#39;, &#39;Economics&#39;) THEN 1
+        ELSE 0
+    END,
+    subject ASC;">
+    <fieldset class="pma-fieldset">
+        <legend>
+            <span class="text-nowrap"><img src="./Q.5_ANS_files/dot.gif" title="Bookmark this SQL query" alt="Bookmark this SQL query" class="icon ic_b_bookmark">&nbsp;Bookmark this SQL query</span>
+        </legend>
+        <div class="formelement">
+            <label>
+                Label:                <input type="text" name="bkm_fields[bkm_label]" value="">
+            </label>
+        </div>
+        <div class="formelement">
+            <label>
+                <input type="checkbox" name="bkm_all_users" value="true">
+                Let every user access this bookmark            </label>
+        </div>
+        <div class="clearfloat"></div>
+    </fieldset>
+    <fieldset class="pma-fieldset tblFooters">
+        <input type="hidden" name="store_bkm" value="1">
+        <input class="btn btn-secondary" type="submit" value="Bookmark this SQL query">
+    </fieldset>
+</form>
+
+</div>
+</div>
+
+<div class="modal fade" id="simulateDmlModal" tabindex="-1" aria-labelledby="simulateDmlModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="simulateDmlModalLabel">Simulate query</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+      <div id="selflink" class="d-print-none">
+      <a href="http://localhost/phpmyadmin/index.php?route=%2Ftable%2Fsql&amp;db=nobel_prize_db&amp;table=Nobel_win&amp;server=1" title="Open new phpMyAdmin window" target="_blank" rel="noopener noreferrer">
+                  <img src="./Q.5_ANS_files/dot.gif" title="Open new phpMyAdmin window" alt="Open new phpMyAdmin window" class="icon ic_window-new">
+              </a>
+    </div>
+  
+  
+
+  
+
+
+
+  
+  
+  
+
+<div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>
